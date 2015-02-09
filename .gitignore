@@ -1,0 +1,11 @@
+*#
+*~
+auto-save-list
+org-clock-save.el
+recentf
+tramp
+eshell
+semanticdb
+url
+ede-projects.el
+.DS_Store
