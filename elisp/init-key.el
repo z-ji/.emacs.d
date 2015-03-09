@@ -1,7 +1,10 @@
+;;Org Mode
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+(global-set-key "\C-cs" 'org-show-subtree)
+
 (global-set-key "\C-c\C-f" 'find-file-root)
 ;;(fullscreen)
 (global-set-key [f11] 'fullscreen)
@@ -22,7 +25,6 @@
 (global-set-key (kbd "C-z") 'undo)
 
 
-
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
 ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
@@ -36,4 +38,9 @@
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 (global-set-key (kbd "C-h r") 'helm-info-emacs)
+;;C-<DEL>
+(define-key helm-find-files-map
+  [(control backspace)] #'helm-find-files-up-one-level)
+(define-key helm-read-file-map
+  [(control backspace)] #'helm-find-files-up-one-level)
 (provide 'init-key)

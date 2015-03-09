@@ -1,5 +1,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Emacs Ö÷ÌâÉèÖÃ ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(set-face-attribute 'default nil :height 160)
+(set-face-attribute 'default nil :height 140)
 (set-fringe-mode '(0 . 0))              ;Make fringe mini size
 (setq linum-format (concat " %" (number-to-string (length (number-to-string (count-lines (point-min) (point-max))))) "d "))
 

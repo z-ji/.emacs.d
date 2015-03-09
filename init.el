@@ -1,11 +1,19 @@
 (add-to-list 'load-path (expand-file-name "elisp" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "elisp/emacs-async" user-emacs-directory))
 (add-to-list 'load-path (expand-file-name "elisp/helm" user-emacs-directory))
-(require 'package)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			 ("melpa" . "http://melpa.org/packages/")
-			 ("marmalade" . "https://marmalade-repo.org/packages/")))
+(add-to-list 'load-path (expand-file-name "elisp/org-mode/lisp" user-emacs-directory))
 
+(require 'package)
+;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+;(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+;			 ("melpa" . "http://melpa.org/packages/")
+					;			 ("marmalade" . "https://marmalade-repo.org/packages/")))
+;(add-to-list 'Info-default-directory-list "elisp/org-mode")
+;org mode
+;(require 'org-install)
+;(require 'org-habit)
+;设置时区 utc8北京时间
+(setenv "TZ" "UTC-08:00")
 ;;多标签
 (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
 (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
@@ -15,6 +23,7 @@
                                       ; scroll bar when your mouse is moving.
 ;;(require 'tabbar-ruler)
 
+;;url默认使用chromium
 (setq browse-url-browser-function 'browse-url-generic
       browse-url-generic-program "chromium-browser")
 ;;window-numbering,使用 M-(1,2,3...9)窗口切换
@@ -24,16 +33,25 @@
 (window-numbering-mode 1)
 ;;company
 (setq company-idle-delay 0)
-;;(require 'chinese-fonts-setup)
 (require 'theme)
-;;(require 'jazz-theme)
-
+;(require 'jazz-theme)
 ;;-----------------helm---------------------
 (require 'helm)
 (require 'helm-config)
 (helm-mode 1)
 (helm-autoresize-mode 1)
-;;emacs-async 疑似异步插件引起cpu卡死 
+(setq helm-fuzzy-match t
+      helm-M-x-fuzzy-match t
+      helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match t
+      helm-semantic-fuzzy-match t
+      helm-imenu-fuzzy-match t
+      helm-locate-fuzzy-match t
+      helm-apropos-fuzzy-match t
+      helm-lisp-fuzzy-completion t
+      enable-recursive-minibuffers t)
+
+;;emacs-async
 (when (require 'dired-aux)
   (require 'dired-async))
 
@@ -45,13 +63,6 @@
 (server-start)
 ;;
 (setq tramp-default-method "sudo")
-(setq helm-fuzzy-match t
-      helm-M-x-fuzzy-match t
-      helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match t
-      helm-semantic-fuzzy-match t
-      helm-imenu-fuzzy-match t
-      helm-locate-fuzzy-match t)
 ;;emacs extension of chrome
 (require 'edit-server)
 (edit-server-start)
@@ -63,7 +74,7 @@
 (scroll-bar-mode -1)                    ;禁用滚动条
 (which-function-mode 1)                 ;在mode line上显示当前光标在哪个函数体内部
 (blink-cursor-mode -1)                  ;指针不闪动
-;;Org-Mode
+;;Org Mode
 (setq org-clock-persist 'history)
 (org-clock-persistence-insinuate)
 ;;org todo keywords
@@ -123,7 +134,6 @@
   (tramp-cleanup-all-connections)
   (find-file (concat "/sudo:root@localhost:" file)))
 
-
 ;;; ### Minibuffer ###
 ;;; --- 迷你buffer
 (setq minibuffer-message-timeout 1)     ;显示消息超时的时间
@@ -165,3 +175,18 @@
 
 (custom-set-variables
 )
+;字体设置
+(defvar emacs-font-name "DejaVu Sans Mono"
+;(defvar emacs-font-name "文泉驿等宽微米黑"  
+  "The font name of English.")
+(defvar emacs-font-size 14
+  "The default font size.")
+(if (display-grayscale-p)
+    (progn
+      (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval
+emacs-font-size)))
+      (set-fontset-font (frame-parameter nil 'font) 'unicode (eval
+emacs-font-name))))
+
+;设置光标类型,possible values are box (the default), hollow (a hollow box), bar (a vertical bar), (bar . n) (a vertical bar n pixels wide), hbar (a horizontal bar), (hbar . n) (a horizontal bar n pixels tall), or nil (no cursor at all).
+(set-default 'cursor-type 'bar)
