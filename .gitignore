@@ -1,14 +1,13 @@
 *#
 *~
+ac-comphist.dat
 auto-save-list
 org-clock-save.el
 recentf
 tramp
 eshell
 deepin-emacs
-ac-comphist.dat
 semanticdb
 url
 ede-projects.el
 .DS_Store
-elisp/org-mode/
