@@ -1,6 +1,5 @@
 (defconst initial-buffer-choice-value "~/KuaiPan/Emacs/all.org" "启动时打开的buffer")
-(defconst  default-directory-value "~/KuaiPan/Emacs/" "C-x C-f时的默认目录")
-
+(defconst default-directory-value "~/KuaiPan/Emacs/" "C-x C-f时的默认目录")
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
   (let ((default-directory (file-name-as-directory dir)))
@@ -52,7 +51,6 @@
 (blink-cursor-mode -1)                  ;指针不闪动
 ;;(setq inhibit-startup-screen t)
 (setq initial-buffer-choice (symbol-value 'initial-buffer-choice-value)) ;;值改为变量
-(setq make-backup-files nil)            ;;禁用文件自动备份
 ;;auto-save
 (setq auto-save-interval 5
       auto-save-timeout 3)
@@ -71,10 +69,14 @@
 (column-number-mode t)
 ;;; 在mode-line显示当前Buffer的大小
 (size-indication-mode 1)
-;;不要生成*~备份文件
-(setq make-backup-files nil)
-;;不要生成#*#备份文件
+;;不生成*~备份文件
+;;(setq make-backup-files nil)
+;;保存file～备份文件到指定目录中
+(setq backup-directory-alist '(("" . "~/tmp/emacs")))
+;;不生成#*#备份文件
 (setq auto-save-default nil)
+;;
+(setq org-babel-load-languages (quote ((shell . t) (calc . t) (java . t))))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -132,6 +134,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '()
  '(package-selected-packages (quote (wsd-mode dash company))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
