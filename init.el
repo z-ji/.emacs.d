@@ -77,6 +77,8 @@
 (setq auto-save-default nil)
 ;;
 (setq org-babel-load-languages (quote ((shell . t) (calc . t) (java . t))))
+;;meet the 50/72 format
+(setq-default fill-column 72)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
