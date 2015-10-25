@@ -28,9 +28,9 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;启动时最大化
-(toggle-frame-maximized)
-;;(toggle-frame-fullscreen)
+;;启动时最大化,置于此处以提高gui加载到完成全屏的速度
+;;(toggle-frame-maximized)
+(toggle-frame-fullscreen)
 ;;use for emacsclient
 (server-start)
 ;;melpa
@@ -38,15 +38,19 @@
 ;;自动配对
 (electric-pair-mode 1)
 ;;(require 'autopair)
-;;(autopair-global-mode) ;; enable autopair in all buffers
+;;(autopair-global-mode) ;; enable agutopair in all buffers
 ;;默认目录
 (setq default-directory (symbol-value 'default-directory-value) )
 ;;以 y/n代表 yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
 (tool-bar-mode -1)
 (menu-bar-mode -1)
-;滚动条
-(scroll-bar-mode 1)
+;;Get visual indication of an exception
+;;(setq visible-bell 1)
+;;Turn off alarms completely
+(setq ring-bell-function 'ignore)
+;;滚动条
+(scroll-bar-mode -1);;not support in windows
 (which-function-mode 1)                 ;在mode line上显示当前光标在哪个函数体内部
 (blink-cursor-mode -1)                  ;指针不闪动
 ;;(setq inhibit-startup-screen t)
