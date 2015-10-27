@@ -1,5 +1,5 @@
-(defconst initial-buffer-choice-value "~/KuaiPan/Emacs/all.org" "启动时打开的buffer")
-(defconst default-directory-value "~/KuaiPan/Emacs/" "C-x C-f时的默认目录")
+(defconst initial-buffer-choice-value "~/emacs/all.org" "启动时打开的buffer")
+(defconst default-directory-value "~/emacs/" "C-x C-f时的默认目录")
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
   (let ((default-directory (file-name-as-directory dir)))
