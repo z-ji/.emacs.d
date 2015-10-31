@@ -59,7 +59,7 @@
 (setq auto-save-interval 5
       auto-save-timeout 3)
 ;;highlight current line 
-(global-hl-line-mode 1)
+(global-hl-line-mode 0)
 (setq global-hl-line-sticky-flag 1);;默认值为nil
 ;; To customize the background color
 ;;(set-face-background 'hl-line "red")
@@ -83,6 +83,10 @@
 (setq org-babel-load-languages (quote ((shell . t) (calc . t) (java . t))))
 ;;meet the 50/72 format
 (setq-default fill-column 72)
+;;recentf config
+(setq recentf-max-menu-items 49)
+(setq recentf-max-saved-items 49)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
