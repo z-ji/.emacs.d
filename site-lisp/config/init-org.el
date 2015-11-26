@@ -12,4 +12,7 @@
 ;;---------Org-mode export html with mathjax-----
 (setq org-html-mathjax-options '((path "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML")))
 ;;or use in a sigle file with org-mode  #+HTML_MATHJAX: align:"left" mathml:t path:""
+;;set the C-c . of the command org-time-stamp in a consistent time format
+(setq-default org-display-custom-times 't)
+(setq org-time-stamp-custom-formats '("<%Y-%m-%d %a>" . "<%Y-%m-%d %a %H:%M>"))
 (provide 'init-org)
