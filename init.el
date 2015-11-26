@@ -79,14 +79,16 @@
 (setq backup-directory-alist '(("" . "~/tmp/emacs")))
 ;;不生成#*#备份文件
 (setq auto-save-default nil)
-;;
-(setq org-babel-load-languages (quote ((shell . t) (calc . t) (java . t))))
 ;;meet the 50/72 format
 (setq-default fill-column 72)
 ;;recentf config
 (setq recentf-max-menu-items 49)
 (setq recentf-max-saved-items 49)
-
+;;set default file encoding
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+;;在保存时自动清除行尾空格及文件结尾空行
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -109,7 +111,7 @@
 (defun now-is ()
     "Display current time."
     (interactive)
-    (message (format-time-string "Now is %Y-%m-%d %T")))
+    (message (format-time-string "Now is %Y-%m-%d %a %T")))
 ;; Ctrl-S-K delete line without kill
 (defun delete-line ()
   (interactive)
