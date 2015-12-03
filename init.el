@@ -1,5 +1,5 @@
-(defconst initial-buffer-choice-value "~/emacs/all.org" "启动时打开的buffer")
-(defconst default-directory-value "~/emacs/" "C-x C-f时的默认目录")
+;;(defconst initial-buffer-choice-value "~/emacs/all.org" "启动时打开的buffer")
+;;(defconst default-directory-value "~/emacs" "C-x C-f时的默认目录")
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
   (let ((default-directory (file-name-as-directory dir)))
@@ -8,7 +8,7 @@
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp/")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;init package;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Added by Package.el.  This must come before configurations installed packages.  
+;; Added by Package.el.  This must come before configurations installed packages.
 (require 'package)
 ;;emacs benchmark-init
 (require 'benchmark-init-loaddefs)
@@ -40,7 +40,7 @@
 ;;(require 'autopair)
 ;;(autopair-global-mode) ;; enable agutopair in all buffers
 ;;默认目录
-(setq default-directory (symbol-value 'default-directory-value) )
+;;(setq default-directory (symbol-value 'default-directory-value) )
 ;;以 y/n代表 yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
 (tool-bar-mode -1)
@@ -54,11 +54,11 @@
 (which-function-mode 1)                 ;在mode line上显示当前光标在哪个函数体内部
 (blink-cursor-mode -1)                  ;指针不闪动
 ;;(setq inhibit-startup-screen t)
-(setq initial-buffer-choice (symbol-value 'initial-buffer-choice-value)) ;;值改为变量
+;;(setq initial-buffer-choice (symbol-value 'initial-buffer-choice-value)) ;;值改为变量
 ;;auto-save
 (setq auto-save-interval 5
       auto-save-timeout 3)
-;;highlight current line 
+;;highlight current line
 (global-hl-line-mode 0)
 (setq global-hl-line-sticky-flag 1);;默认值为nil
 ;; To customize the background color
@@ -138,8 +138,8 @@
 (defun kill-other-buffers ()
     "Kill all other buffers."
     (interactive)
-    (mapc 'kill-buffer 
-          (delq (current-buffer) 
+    (mapc 'kill-buffer
+          (delq (current-buffer)
                 (remove-if-not 'buffer-file-name (buffer-list)))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
