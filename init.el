@@ -34,7 +34,7 @@
 ;;use for emacsclient
 (server-start)
 ;;melpa
-(setq package-selected-packages (quote (dash company)))
+;;(setq package-selected-packages (quote (dash company)))
 ;;自动配对
 (electric-pair-mode 1)
 ;;(require 'autopair)
@@ -146,8 +146,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '()
- '(package-selected-packages (quote (wsd-mode dash company))))
+ '(nil nil t)
+ '(package-selected-packages (quote (company wsd-mode dash))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

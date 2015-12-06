@@ -1,4 +1,5 @@
-(autoload 'company-mode "company" nil t)
-;;(add-hook 'after-init-hook 'global-company-mode)
-(setq global-company-mode 1)
+;;(autoload 'company-mode "company" nil t)
+;;(setq global-company-mode 1)
+(require 'company)
+(add-hook 'after-init-hook 'global-company-mode)
 (provide 'init-company)
