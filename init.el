@@ -1,3 +1,4 @@
+;;this will popup a window to ASKPASS in windows, and oprate on 'ECHO AREA' of emacs in linux
 (setenv "GIT_ASKPASS" "git-gui--askpass")
 ;;(defconst initial-buffer-choice-value "~/emacs/all.org" "启动时打开的buffer")
 ;;(defconst default-directory-value "~/emacs" "C-x C-f时的默认目录")
