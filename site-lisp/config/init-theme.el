@@ -10,8 +10,8 @@
 ;;Font Settings for Deepin Linux
 ;;(defvar emacs-font-name "文泉驿等宽微米黑"
 ;;(defvar emacs-font-name "sans-serif"
-(defvar emacs-font-name "DejaVu Sans Mono"
-;;(defvar emacs-font-name "微软雅黑"
+;;(defvar emacs-font-name "DejaVu Sans Mono"
+(defvar emacs-font-name "微软雅黑"
 ;;(defvar emacs-font-name "Inconsolata"
 ;;(defvar emacs-font-name "Droid Sans Mono"
 ;;(defvar emacs-font-name "Ubuntu Mono"

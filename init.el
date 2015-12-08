@@ -1,3 +1,4 @@
+(setenv "GIT_ASKPASS" "git-gui--askpass")
 ;;(defconst initial-buffer-choice-value "~/emacs/all.org" "启动时打开的buffer")
 ;;(defconst default-directory-value "~/emacs" "C-x C-f时的默认目录")
 (defun add-subdirs-to-load-path (dir)
@@ -29,8 +30,8 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;启动时最大化,置于此处以提高gui加载到完成全屏的速度
-;;(toggle-frame-maximized)
-(toggle-frame-fullscreen)
+(toggle-frame-maximized)
+;;(toggle-frame-fullscreen)
 ;;use for emacsclient
 (server-start)
 ;;melpa
