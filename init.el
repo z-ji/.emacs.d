@@ -30,6 +30,8 @@
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;avoid the warning message 'ad-handle-definition: `tramp-read-passwd' got redefined'
+(setq ad-redefinition-action 'accept)
 ;;启动时最大化,置于此处以提高gui加载到完成全屏的速度
 (toggle-frame-maximized)
 ;;(toggle-frame-fullscreen)
@@ -52,7 +54,7 @@
 ;;Turn off alarms completely
 (setq ring-bell-function 'ignore)
 ;;滚动条
-(scroll-bar-mode -1);;not support in windows
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (which-function-mode 1)                 ;在mode line上显示当前光标在哪个函数体内部
 (blink-cursor-mode -1)                  ;指针不闪动
 ;;(setq inhibit-startup-screen t)
@@ -94,6 +96,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(require 'init-local)
 (require 'init-theme)
 (require 'init-async)
 (require 'init-helm)
@@ -148,7 +151,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(nil nil t)
  '(package-selected-packages (quote (company wsd-mode dash))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
