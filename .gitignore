@@ -12,3 +12,4 @@ url
 ede-projects.el
 .DS_Store
 session.*
+init-local.el
