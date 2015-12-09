@@ -7,6 +7,10 @@
 ;;    ("/home/byboating/.emacs.d/site-lisp/theme/emacs-color-theme-solarized/color-theme-solarized-20150813" custom-theme-directory t)))
 ;;(load-theme 'solarized t)
 ;;字体设置
+(defvar emacs-font-name "DejaVu Sans Mono"
+  "The font name of English.")
+(defvar emacs-font-size 12
+  "The default font size.")
 (if (display-grayscale-p)
     (progn
       (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval

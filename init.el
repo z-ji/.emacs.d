@@ -96,7 +96,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(require 'init-local)
 (require 'init-theme)
 (require 'init-async)
 (require 'init-helm)
@@ -110,6 +109,9 @@
 (require 'init-highlight-parentheses)
 (require 'init-tramp)
 (require 'init-time-in-mode-line);;mode line显示当前时间
+(when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
+  (error "Please move init-local.el to ~/.emacs.d/site-lisp/config"))
+(require 'init-local nil t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
