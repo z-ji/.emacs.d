@@ -25,9 +25,25 @@ emacs-font-size)))
 (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
 
 ;; Choose a color for mode-line.(Default: blue)
-;;(moe-theme-set-color 'cyan)
+(moe-theme-set-color 'w/b)
 
 ;;(setq moe-light-pure-white-background-in-terminal t)
-(moe-dark)
+;;(moe-dark)
+(require 'moe-theme-switcher)
+;;config mode-line to powerline
+(require 'powerline)
+(powerline-moe-theme)
 
+;;Paren
+;;启用并修改括号自带配置
+(show-paren-mode t)
+(setq show-paren-style 'expression)
+;;高亮配对的括号
+;;Enables highlight-parentheses-mode on all buffers
+(require 'highlight-parentheses)
+;; (define-globalized-minor-mode global-highlight-parentheses-mode
+;;   highlight-parentheses-mode
+;;   (lambda ()
+;;     (highlight-parentheses-mode t)))
+(global-highlight-parentheses-mode t)
 (provide 'init-theme)

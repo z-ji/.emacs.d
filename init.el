@@ -109,7 +109,6 @@
 (require 'init-nlinum)
 (require 'init-magit)
 (require 'init-org)
-(require 'init-highlight-parentheses)
 (require 'init-tramp)
 (require 'init-time-in-mode-line);;mode line显示当前时间
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

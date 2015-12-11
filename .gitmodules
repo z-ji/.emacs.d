@@ -22,3 +22,6 @@
 [submodule "site-lisp/extensions/moe-theme-el"]
 	path = site-lisp/extensions/moe-theme-el
 	url = https://github.com/kuanyui/moe-theme.el.git
+[submodule "site-lisp/extensions/powerline"]
+	path = site-lisp/extensions/powerline
+	url = https://github.com/milkypostman/powerline.git
