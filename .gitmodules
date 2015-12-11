@@ -19,3 +19,6 @@
 [submodule "site-lisp/extensions/undo-tree"]
 	path = site-lisp/extensions/undo-tree
 	url = https://github.com/emacsmirror/undo-tree.git
+[submodule "site-lisp/extensions/moe-theme-el"]
+	path = site-lisp/extensions/moe-theme-el
+	url = https://github.com/kuanyui/moe-theme.el.git
