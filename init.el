@@ -76,7 +76,7 @@
 ;;让mode line显示列数(行数为默认显示)
 (column-number-mode t)
 ;;; 在mode-line显示当前Buffer的大小
-(size-indication-mode 1)
+;;(size-indication-mode 1)
 ;;不生成*~备份文件
 ;;(setq make-backup-files nil)
 ;;保存file～备份文件到指定目录中
@@ -89,8 +89,8 @@
 (setq recentf-max-menu-items 49)
 (setq recentf-max-saved-items 49)
 ;;set default file encoding
-(set-language-environment "UTF-8")
-(set-default-coding-systems 'utf-8)
+;;(set-language-environment "UTF-8")
+;;(set-default-coding-systems 'utf-8)
 ;;在保存时自动清除行尾空格及文件结尾空行
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -110,7 +110,7 @@
 (require 'init-magit)
 (require 'init-org)
 (require 'init-tramp)
-(require 'init-time-in-mode-line);;mode line显示当前时间
+;;(require 'init-time-in-mode-line);;mode line显示当前时间
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
