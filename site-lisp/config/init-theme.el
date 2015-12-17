@@ -16,7 +16,7 @@ emacs-font-size)))
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/extensions/meo-theme.el/")
 
 ;;---moe-theme---
-;; (require 'moe-theme)
+ (require 'moe-theme)
 ;; ;; Show highlighted buffer-id as decoration. (Default: nil)
 ;; (setq moe-theme-highlight-buffer-id nil)
 ;; ;; Resize titles (optional).
@@ -24,16 +24,20 @@ emacs-font-size)))
 ;; ;;(setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
 ;; ;;(setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
 ;; ;; Choose a color for mode-line.(Default: blue)
-;; (moe-theme-set-color 'w/b)
-;; ;;(setq moe-light-pure-white-background-in-terminal t)
-;; ;;(moe-dark)
+;; ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
+(moe-theme-set-color 'green)
+(setq moe-light-pure-white-background-in-terminal t)
+;;(moe-dark)
 ;; (require 'moe-theme-switcher)
 
 ;;---powerline---
 (require 'powerline)
-(powerline-default-theme)
-;;(powerline-moe-theme)
-
+;;(powerline-default-theme)
+;;(powerline-center-theme)
+;;(powerline-center-evil-theme)
+(powerline-moe-theme)
+;;(powerline-vim-theme)
+;;(powerline-nano-theme)
 ;;---paren---
 ;;启用并修改括号自带配置
 (show-paren-mode t)
