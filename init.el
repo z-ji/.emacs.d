@@ -97,6 +97,9 @@
 ;; (set-selection-coding-system 'utf-8)
 ;;在保存时自动清除行尾空格及文件结尾空行
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+;;enable lower/upper case convert for a region
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
