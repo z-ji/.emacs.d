@@ -117,6 +117,7 @@
 (require 'init-magit)
 (require 'init-org)
 (require 'init-tramp)
+(require 'init-ox-twbs)
 ;;(require 'init-time-in-mode-line);;mode line显示当前时间
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
