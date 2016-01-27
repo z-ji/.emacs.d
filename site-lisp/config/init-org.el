@@ -16,7 +16,9 @@
 (setq-default org-display-custom-times 't)
 (setq org-time-stamp-custom-formats '("<%Y-%m-%d %a>" . "<%Y-%m-%d %a %H:%M>"))
 ;;set the org babel languages
-(setq org-babel-load-languages (quote ((shell . t) (calc . t) (java . t))))
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ (quote ((dot . t)(shell . t) (calc . t) (java . t))))
 ;;log closing item
 (setq org-log-done 'time)
 (setq org-log-done 'note)
