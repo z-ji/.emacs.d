@@ -14,8 +14,8 @@
 (global-set-key (kbd "C-w") 'cut-line-or-region) ; cut
 (global-set-key (kbd "M-w") 'copy-line-or-region) ; copy
 ;;放大缩小文本
-(global-set-key (kbd"C--") 'text-scale-decrease)
-(global-set-key (kbd"C-=") 'text-scale-increase)
+;;(global-set-key (kbd"C--") 'text-scale-decrease)
+;;(global-set-key (kbd"C-=") 'text-scale-increase)
 
 ;;关闭emacsclient打开的文件
 (global-set-key (kbd"C-x C-w") 'server-edit)
