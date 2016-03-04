@@ -16,7 +16,7 @@ emacs-font-size)))
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/extensions/meo-theme.el/")
 
 ;;---moe-theme---
- (require 'moe-theme)
+(require 'moe-theme)
 ;; ;; Show highlighted buffer-id as decoration. (Default: nil)
 ;; (setq moe-theme-highlight-buffer-id nil)
 ;; ;; Resize titles (optional).
