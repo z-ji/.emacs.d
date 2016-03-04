@@ -86,8 +86,8 @@
 ;;meet the 50/72 format
 (setq-default fill-column 72)
 ;;recentf config
-(setq recentf-max-menu-items 49)
-(setq recentf-max-saved-items 49)
+(setq recentf-max-menu-items 999)
+(setq recentf-max-saved-items 999)
 ;;set default file encoding
 ;; (set-language-environment "UTF-8")
 ;; (set-default-coding-systems 'utf-8)
