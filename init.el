@@ -119,6 +119,7 @@
 (require 'init-tramp)
 (require 'init-ox-twbs)
 ;;(require 'init-time-in-mode-line);;mode line显示当前时间
+(require 'init-auto-save)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
