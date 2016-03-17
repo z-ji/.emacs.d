@@ -59,9 +59,6 @@
 (blink-cursor-mode -1)                  ;指针不闪动
 ;;(setq inhibit-startup-screen t)
 ;;(setq initial-buffer-choice (symbol-value 'initial-buffer-choice-value)) ;;值改为变量
-;;auto-save
-(setq auto-save-interval 5
-      auto-save-timeout 3)
 ;;highlight current line
 (global-hl-line-mode 0)
 (setq global-hl-line-sticky-flag 1);;默认值为nil
