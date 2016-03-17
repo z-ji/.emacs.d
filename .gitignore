@@ -14,3 +14,5 @@ ede-projects.el
 session.*
 init-local.el
 /server/server
+.emacs.desktop
+.emacs.desktop.lock
