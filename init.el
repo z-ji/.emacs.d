@@ -97,6 +97,8 @@
 ;;enable lower/upper case convert for a region
 (put 'downcase-region 'disabled nil)
 (put 'upcase-region 'disabled nil)
+;;enable the auto save/restore the desktop when exit/restart emacs
+(desktop-save-mode t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
