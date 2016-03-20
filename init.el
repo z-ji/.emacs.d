@@ -8,7 +8,8 @@
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp/")
-
+(setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-8.3.4/lisp" load-path))
+     (setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-8.3.4/contrib/lisp" load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;init package;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Added by Package.el.  This must come before configurations installed packages.
 (require 'package)
@@ -16,7 +17,7 @@
 (require 'benchmark-init-loaddefs)
 (benchmark-init/activate)
 ;;org remote package-archives
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+;;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
 ;;(add-to-list 'Info-default-directory-list "elisp/org-mode")
 ;;melpa
 (add-to-list 'package-archives
