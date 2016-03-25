@@ -22,33 +22,4 @@
 (setq org-log-done 'time)
 ;;record an additional note together with the clock-out timestamp
 (setq org-log-note-clock-out t)
-;;org export to html with jekyll
-(setq org-publish-project-alist
-      '(
-
-  ("org-ianbarton"
-          ;; Path to your org files.
-          :base-directory "~/org/blog/org/"
-          :base-extension "org"
-
-          ;; Path to your Jekyll project.
-          :publishing-directory "~/org/blog/jekyll/"
-          :recursive t
-          :publishing-function org-publish-org-to-html
-          :headline-levels 4 
-          :html-extension "html"
-          :body-only t ;; Only export section between <body> </body>
-    )
-
-
-    ("org-static-ian"
-          :base-directory "~/org/blog/org/"
-          :base-extension "css\\|js\\|png\\|jpg\\|gif\\|pdf\\|mp3\\|ogg\\|swf\\|php"
-          :publishing-directory "~/devel/ianbarton/"
-          :recursive t
-          :publishing-function org-publish-attachment)
-
-    ("ian" :components ("org-ianbarton" "org-static-ian"))
-
-))
 (provide 'init-org)
