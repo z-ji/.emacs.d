@@ -27,9 +27,9 @@ emacs-font-size)))
 ;; ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
 (moe-theme-set-color 'w/b)
 (setq moe-light-pure-white-background-in-terminal t)
-;;(moe-light)
-(moe-dark)
-(require 'moe-theme-switcher)
+(moe-light)
+;;(moe-dark)
+;;(require 'moe-theme-switcher)
 
 ;;---powerline---
 (require 'powerline)

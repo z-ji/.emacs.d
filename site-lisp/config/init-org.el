@@ -20,4 +20,6 @@
  (quote ((dot . t)(shell . t) (calc . t) (java . t))))
 ;;log closing item
 (setq org-log-done 'time)
+;;record an additional note together with the clock-out timestamp
+(setq org-log-note-clock-out t)
 (provide 'init-org)
