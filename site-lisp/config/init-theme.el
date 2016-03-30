@@ -13,9 +13,9 @@
 emacs-font-size)))
       (set-fontset-font (frame-parameter nil 'font) 'unicode (eval
 							      emacs-font-name))))
-;;(add-to-list 'load-path "~/.emacs.d/site-lisp/extensions/meo-theme.el/")
 
 ;;---moe-theme---
+;;(add-to-list 'load-path "~/.emacs.d/site-lisp/extensions/meo-theme.el/")
 (require 'moe-theme)
 ;; ;; Show highlighted buffer-id as decoration. (Default: nil)
 ;; (setq moe-theme-highlight-buffer-id nil)
