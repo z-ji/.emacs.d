@@ -1,13 +1,12 @@
-#+TITLE: My emacs profiles.
+#+TITLE: An emacs configuration
 * Install
 #+BEGIN_SRC shell
-git clone --recursive https://github.com/namezhouji/.emacs.d.git
-cd ~/.emacs.d/site-lisp/extensions/magit/
-make magit 
-make install magit
+git clone --recursive https://github.com/imzj/.emacs.d.git
 cd ~/.emacs.d/site-lisp/extensions/benchmark-init-el
 make
 cd ~/.emacs.d/site-lisp/extensions/helm
+make
+cd ~/.emacs.d/site-lisp/extensions/magit/
 make
 #+END_SRC
 * Local config
