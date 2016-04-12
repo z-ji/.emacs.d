@@ -1,0 +1,25 @@
+#+TITLE: My emacs profiles.
+* Install
+#+BEGIN_SRC shell
+git clone --recursive https://github.com/namezhouji/.emacs.d.git
+cd ~/.emacs.d/site-lisp/extensions/magit/
+make magit 
+make install magit
+cd ~/.emacs.d/site-lisp/extensions/benchmark-init-el
+make
+cd ~/.emacs.d/site-lisp/extensions/helm
+make
+#+END_SRC
+* Local config
+To add your own customization, create a file ~/.emacs.d/site-lisp/config/init-local.el which looks like this:
+#+BEGIN_EXAMPLE
+... your code here ...
+
+(provide 'init-local)
+
+#+END_EXAMPLE
+* Update
+#+BEGIN_SRC shell
+git pull && git submodule update --init --recursive
+#+END_SRC
+

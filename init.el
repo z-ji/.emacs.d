@@ -100,6 +100,14 @@
 (put 'upcase-region 'disabled nil)
 ;;enable the auto save/restore the desktop when exit/restart emacs
 ;;(desktop-save-mode t)
+;;enable global-whitespace-mode
+(global-whitespace-mode t)
+;;space only
+(setq-default indent-tabs-mode nil)
+;; set default tab char's display width to 4 spaces which default is 8 spaces
+(setq-default tab-width 4)
+;;let xdg-open works in eshell and org-mode export to html
+(setq process-connection-type nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
