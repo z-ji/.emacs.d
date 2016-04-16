@@ -6,14 +6,15 @@
 ;;   (quote
 ;;    ("/home/byboating/.emacs.d/site-lisp/theme/emacs-color-theme-solarized/color-theme-solarized-20150813" custom-theme-directory t)))
 ;;(load-theme 'solarized t)
-;;---字体设置---
+;;---font setting---
 (if (display-grayscale-p)
     (progn
-      (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval
-emacs-font-size)))
+      (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
       (set-fontset-font (frame-parameter nil 'font) 'unicode (eval
-							      emacs-font-name))))
-
+                                                              emacs-font-name))))
+;;---setting font for emacsclient -c some_files---
+;;(setq default-frame-alist '((font . "DejaVu Sans Mono-14")))
+(setq default-frame-alist '((font . (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))))
 ;;---moe-theme---
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/extensions/meo-theme.el/")
 (require 'moe-theme)
