@@ -108,6 +108,9 @@
 (setq-default tab-width 4)
 ;;let xdg-open works in eshell and org-mode export to html
 (setq process-connection-type nil)
+;;Avoid 'timed out waiting for property notify event' when select large region in x environment.
+;;from http://emacs.1067599.n5.nabble.com/bug-13486-24-2-92-large-X-selections-timed-out-waiting-for-property-notify-event-td275798.html#a286215
+(setq select-active-regions nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
