@@ -10,7 +10,7 @@
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp/")
 ;;(setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-8.3.4/lisp" load-path))
 ;;     (setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-8.3.4/contrib/lisp" load-path))
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;init package;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;init package;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Added by Package.el.  This must come before configurations installed packages.
 (require 'package)
 ;;emacs benchmark-init
@@ -34,8 +34,8 @@
 ;;avoid the warning message 'ad-handle-definition: `tramp-read-passwd' got redefined'
 (setq ad-redefinition-action 'accept)
 ;;启动时最大化,置于此处以提高gui加载到完成全屏的速度
-(toggle-frame-maximized)
-;;(toggle-frame-fullscreen)
+;;(toggle-frame-maximized)
+(toggle-frame-fullscreen)
 ;;use for emacsclient
 (server-start)
 ;;melpa
@@ -176,3 +176,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(require 'notifications)
+
+;; (notifications-notify :title "Achtung!"
+;;                       :body (format "You have an appointment in %d minutes" 10)
+;;                       :app-name "Emacs: Org"
+;;                       :sound-name "alarm-clock-elapsed")
