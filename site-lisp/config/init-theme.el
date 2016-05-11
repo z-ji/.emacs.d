@@ -26,17 +26,17 @@
 ;; ;; Choose a color for mode-line.(Default: blue)
 ;; ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
 (moe-theme-set-color 'w/b)
-(setq moe-light-pure-white-background-in-terminal t)
+;;(setq moe-light-pure-white-background-in-terminal t)
 (moe-light)
 ;;(moe-dark)
 ;;(require 'moe-theme-switcher)
 
 ;;---powerline---
-(require 'powerline)
+;;(require 'powerline)
 ;;(powerline-default-theme)
 ;;(powerline-center-theme)
 ;;(powerline-center-evil-theme)
-(powerline-moe-theme)
+;;(powerline-moe-theme)
 ;;(powerline-vim-theme)
 ;;(powerline-nano-theme)
 ;;---paren---
