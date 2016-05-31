@@ -51,4 +51,6 @@
 
 (global-set-key (kbd "C-x g") 'magit-status)
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
+;;Customize function keymap
+(global-set-key (kbd "C-x C-k") 'kill-other-buffers)
 (provide 'init-key)
