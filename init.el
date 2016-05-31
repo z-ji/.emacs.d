@@ -8,8 +8,8 @@
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp/")
-;;(setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-8.3.4/lisp" load-path))
-;;     (setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-8.3.4/contrib/lisp" load-path))
+(setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-mode/lisp" load-path))
+(setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-mode/contrib/lisp" load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;init package;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Added by Package.el.  This must come before configurations installed packages.
 (require 'package)
@@ -101,7 +101,7 @@
 ;;enable the auto save/restore the desktop when exit/restart emacs
 ;;(desktop-save-mode t)
 ;;enable global-whitespace-mode
-(global-whitespace-mode t)
+;;(global-whitespace-mode t)
 ;;space only
 (setq-default indent-tabs-mode nil)
 ;; set default tab char's display width to 4 spaces which default is 8 spaces
@@ -128,8 +128,8 @@
 (require 'init-magit)
 (require 'init-org)
 (require 'init-tramp)
-(require 'init-ox-twbs)
-;;(require 'init-time-in-mode-line);;mode line显示当前时间
+;;(require 'init-ox-twbs)
+(require 'init-time-in-mode-line);;mode line显示当前时间
 (require 'init-auto-save)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -172,7 +172,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company wsd-mode dash))))
+ '(package-selected-packages (quote (company dash))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
