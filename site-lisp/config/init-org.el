@@ -22,6 +22,6 @@
 (setq org-log-done 'time)
 ;;record an additional note together with the clock-out timestamp
 (setq org-log-note-clock-out t)
-;;Ignore the section-numbers when export to other files
+;;Ignore section-numbers when export to other files
 (setq org-export-with-section-numbers nil)
 (provide 'init-org)
