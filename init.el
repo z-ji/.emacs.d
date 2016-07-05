@@ -122,6 +122,7 @@
 (require 'init-helm)
 (require 'init-company)
 (require 'init-imenu-anywhere)
+(require 'init-bracket)
 (require 'init-key)
 (require 'init-undo-tree)
 (require 'init-nlinum)
@@ -167,6 +168,7 @@
     (mapc 'kill-buffer
           (delq (current-buffer)
                 (remove-if-not 'buffer-file-name (buffer-list)))))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

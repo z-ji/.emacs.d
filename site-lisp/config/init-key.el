@@ -53,4 +53,8 @@
 (global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 ;;Customize function keymap
 (global-set-key (kbd "C-x C-k") 'kill-other-buffers)
+;;move between brackets
+(global-set-key (kbd "C-M-[") 'xah-backward-left-bracket)
+(global-set-key (kbd "C-M-]") 'xah-forward-right-bracket)
+
 (provide 'init-key)
