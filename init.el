@@ -132,6 +132,9 @@
 ;;(require 'init-ox-twbs)
 (require 'init-time-in-mode-line);;mode line显示当前时间
 (require 'init-auto-save)
+;;latex
+(require 'ox-latex-chinese)
+(oxlc/toggle-ox-latex-chinese t)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
@@ -174,7 +177,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (company dash))))
+ '(package-selected-packages (quote (ox-latex-chinese ox-twbs company dash))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
