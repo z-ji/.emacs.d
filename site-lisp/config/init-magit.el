@@ -2,7 +2,7 @@
 (with-eval-after-load 'info
   (info-initialize)
   (add-to-list 'Info-directory-list
-	       "~/.emacs.d/site-lisp/magit/Documentation/"))
+	       "~/.emacs.d/site-lisp/extensions/magit/Documentation/"))
 ;; gitman info manual
 ;;http://magit.vc/manual/magit/How-to-install-the-gitman-info-manual_003f.html#How-to-install-the-gitman-info-manual_003f
 ;; (defadvice Info-follow-nearest-node (around gitman activate)
