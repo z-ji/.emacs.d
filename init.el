@@ -135,6 +135,7 @@
 ;;latex
 (require 'ox-latex-chinese)
 (oxlc/toggle-ox-latex-chinese t)
+(require 'dired-fixups)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
