@@ -11,5 +11,5 @@
       helm-locate-fuzzy-match t
       helm-apropos-fuzzy-match t
       helm-lisp-fuzzy-completion t
-      enable-recursive-minibuffers t);;
+      enable-recursive-minibuffers t)
 (provide 'init-helm)
