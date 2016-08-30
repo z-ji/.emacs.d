@@ -12,4 +12,5 @@
       helm-apropos-fuzzy-match t
       helm-lisp-fuzzy-completion t
       enable-recursive-minibuffers t)
+(setq helm-buffer-max-length 70)
 (provide 'init-helm)
