@@ -13,7 +13,9 @@
       (set-fontset-font (frame-parameter nil 'font) 'unicode (eval
                                                               emacs-font-name))))
 ;;---setting font for emacsclient -c some_files, will also affect emacs main frame, and make font configuration above invalid---
-(setq default-frame-alist '((font . "DejaVu Sans Mono-14")))
+(setq default-frame-alist '((font . "DejaVu Sans Mono-14")
+                            (width . 120) (height . 40)
+                            ))
 ;;---moe-theme---
 ;;(add-to-list 'load-path "~/.emacs.d/site-lisp/extensions/meo-theme.el/")
 (require 'moe-theme)
