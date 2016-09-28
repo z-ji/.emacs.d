@@ -56,7 +56,7 @@
 (setq ring-bell-function 'ignore)
 ;;滚动条
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(which-function-mode 1)                 ;在mode line上显示当前光标在哪个函数体内部
+;;(which-function-mode 1)                 ;在mode line上显示当前光标在哪个函数体内部
 (blink-cursor-mode -1)                  ;指针不闪动
 ;;(setq inhibit-startup-screen t)
 ;;(setq initial-buffer-choice (symbol-value 'initial-buffer-choice-value)) ;;值改为变量
