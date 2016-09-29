@@ -1,7 +1,7 @@
 #+TITLE: An emacs configuration
 * Install
 #+BEGIN_SRC shell
-git clone --recursive https://github.com/imzj/.emacs.d.git
+git clone --recursive https://github.com/zhouji0230/.emacs.d.git
 cd ~/.emacs.d/site-lisp/extensions/benchmark-init-el
 make
 cd ~/.emacs.d/site-lisp/extensions/helm
