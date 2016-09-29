@@ -8,6 +8,8 @@ cd ~/.emacs.d/site-lisp/extensions/helm
 make
 cd ~/.emacs.d/site-lisp/extensions/magit/
 make
+cd ~/.emacs.d/site-lisp/extensions/org-mode/
+make
 #+END_SRC
 * Local config
 To add your own customization, create a file ~/.emacs.d/site-lisp/config/init-local.el which looks like this:
