@@ -28,9 +28,6 @@
 [submodule "site-lisp/extensions/ox-twbs"]
 	path = site-lisp/extensions/ox-twbs
 	url = https://github.com/marsmining/ox-twbs.git
-[submodule "site-lisp/extensions/org-mode"]
-	path = site-lisp/extensions/org-mode
-	url = git://orgmode.org/org-mode.git
 [submodule "site-lisp/extensions/multi-term"]
 	path = site-lisp/extensions/multi-term
 	url = https://github.com/emacsmirror/multi-term.git

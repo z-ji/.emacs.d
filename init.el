@@ -8,17 +8,12 @@
     (add-to-list 'load-path dir)
     (normal-top-level-add-subdirs-to-load-path)))
 (add-subdirs-to-load-path "~/.emacs.d/site-lisp/")
-(setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-mode/lisp" load-path))
-(setq load-path (cons "~/.emacs.d/site-lisp/extensions/org-mode/contrib/lisp" load-path))
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;init package;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Added by Package.el.  This must come before configurations installed packages.
 (require 'package)
 ;;emacs benchmark-init
 (require 'benchmark-init-loaddefs)
 (benchmark-init/activate)
-;;org remote package-archives
-;;(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-;;(add-to-list 'Info-default-directory-list "elisp/org-mode")
 ;;melpa
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
@@ -179,7 +174,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (json-mode ox-latex-chinese ox-twbs company dash))))
+ '(package-selected-packages
+   (quote
+    (org json-mode ox-latex-chinese ox-twbs company dash))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
