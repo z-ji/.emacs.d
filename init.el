@@ -133,6 +133,7 @@
 (oxlc/toggle-ox-latex-chinese t)
 (require 'dired-fixups)
 (require 'init-multi-term)
+(require 'init-editorconfig)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数

@@ -31,3 +31,6 @@
 [submodule "site-lisp/extensions/multi-term"]
 	path = site-lisp/extensions/multi-term
 	url = https://github.com/emacsmirror/multi-term.git
+[submodule "site-lisp/extensions/editorconfig"]
+	path = site-lisp/extensions/editorconfig
+	url = https://github.com/editorconfig/editorconfig-emacs.git
