@@ -1,3 +1,4 @@
+(global-set-key (kbd "C-SPC") 'nil)
 ;;Org Mode
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
