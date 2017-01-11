@@ -6,7 +6,7 @@
 (global-set-key "\C-cb" 'org-iswitchb)
 (global-set-key "\C-cs" 'org-show-subtree)
 ;;Find file as root
-(global-set-key "\C-x\M-f" 'find-file-root)
+(global-set-key (kbd "C-x C-S-f") 'find-file-root)
 ;;(fullscreen)
 (global-set-key [f9] 'toggle-frame-fullscreen)
 (global-set-key [f10] 'toggle-frame-maximized)
