@@ -128,9 +128,6 @@
 ;;(require 'init-ox-twbs)
 (require 'init-time-in-mode-line);;mode line显示当前时间
 (require 'init-auto-save)
-;;latex
-(require 'ox-latex-chinese)
-(oxlc/toggle-ox-latex-chinese t)
 (require 'dired-fixups)
 (require 'init-multi-term)
 (require 'init-editorconfig)
@@ -178,7 +175,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (org json-mode ox-latex-chinese ox-twbs company dash))))
+    (org json-mode ox-twbs company dash))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
