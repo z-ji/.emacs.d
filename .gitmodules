@@ -13,12 +13,6 @@
 [submodule "site-lisp/extensions/undo-tree"]
 	path = site-lisp/extensions/undo-tree
 	url = https://github.com/emacsmirror/undo-tree.git
-[submodule "site-lisp/extensions/moe-theme-el"]
-	path = site-lisp/extensions/moe-theme-el
-	url = https://github.com/kuanyui/moe-theme.el.git
-[submodule "site-lisp/extensions/powerline"]
-	path = site-lisp/extensions/powerline
-	url = https://github.com/milkypostman/powerline.git
 [submodule "site-lisp/extensions/multi-term"]
 	path = site-lisp/extensions/multi-term
 	url = https://github.com/emacsmirror/multi-term.git
