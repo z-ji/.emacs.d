@@ -4,6 +4,3 @@
 [submodule "site-lisp/extensions/undo-tree"]
 	path = site-lisp/extensions/undo-tree
 	url = https://github.com/emacsmirror/undo-tree.git
-[submodule "site-lisp/extensions/multi-term"]
-	path = site-lisp/extensions/multi-term
-	url = https://github.com/emacsmirror/multi-term.git
