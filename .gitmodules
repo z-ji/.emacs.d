@@ -1,9 +1,6 @@
 [submodule "site-lisp/extensions/benchmark-init-el"]
 	path = site-lisp/extensions/benchmark-init-el
 	url = https://github.com/dholm/benchmark-init-el.git
-[submodule "site-lisp/extensions/emacs-async"]
-	path = site-lisp/extensions/emacs-async
-	url = https://github.com/jwiegley/emacs-async.git
 [submodule "site-lisp/extensions/imenu-anywhere"]
 	path = site-lisp/extensions/imenu-anywhere
 	url = https://github.com/vspinu/imenu-anywhere.git
