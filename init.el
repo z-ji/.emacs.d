@@ -180,7 +180,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (expand-region ox-latex-chinese org json-mode ox-twbs company dash))))
+    (expand-region ox-latex-chinese org json-mode ox-twbs company dash magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
