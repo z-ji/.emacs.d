@@ -4,18 +4,12 @@
 [submodule "site-lisp/extensions/emacs-async"]
 	path = site-lisp/extensions/emacs-async
 	url = https://github.com/jwiegley/emacs-async.git
-[submodule "site-lisp/extensions/helm"]
-	path = site-lisp/extensions/helm
-	url = https://github.com/emacs-helm/helm.git
 [submodule "site-lisp/extensions/highlight-parentheses-el"]
 	path = site-lisp/extensions/highlight-parentheses-el
 	url = https://github.com/tsdh/highlight-parentheses.el.git
 [submodule "site-lisp/extensions/imenu-anywhere"]
 	path = site-lisp/extensions/imenu-anywhere
 	url = https://github.com/vspinu/imenu-anywhere.git
-[submodule "site-lisp/extensions/magit"]
-	path = site-lisp/extensions/magit
-	url = https://github.com/magit/magit.git
 [submodule "site-lisp/extensions/undo-tree"]
 	path = site-lisp/extensions/undo-tree
 	url = https://github.com/emacsmirror/undo-tree.git
