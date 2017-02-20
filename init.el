@@ -112,6 +112,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (when (file-exists-p (expand-file-name "init-local.el" user-emacs-directory))
   (error "Please move init-local.el to ~/.emacs.d/site-lisp/config"))
+(eval-when-compile (require 'cl))
 (require 'init-local nil t)
 (require 'init-theme)
 (require 'init-async)
@@ -131,6 +132,10 @@
 (require 'dired-fixups)
 (require 'init-multi-term)
 (require 'init-editorconfig)
+(require 'ox-latex-chinese)
+(oxlc/toggle-ox-latex-chinese t)
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
@@ -175,7 +180,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (org json-mode ox-twbs company dash))))
+    (expand-region ox-latex-chinese org json-mode ox-twbs company dash))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
