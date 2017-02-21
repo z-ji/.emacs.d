@@ -1,10 +1,6 @@
 #+TITLE: An emacs configuration
 * Install
-#+BEGIN_SRC shell
-git clone --recursive https://github.com/ji-zhou/.emacs.d.git
-cd ~/.emacs.d/site-lisp/extensions/benchmark-init-el
-make
-#+END_SRC
+: curl -sSL https://raw.githubusercontent.com/ji-zhou/.emacs.d/master/install.sh | sh
 * Local config
 To add your own customization, create a file ~/.emacs.d/site-lisp/config/init-local.el which looks like this:
 #+BEGIN_EXAMPLE
