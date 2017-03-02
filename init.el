@@ -12,8 +12,9 @@
 ;; Added by Package.el.  This must come before configurations installed packages.
 (require 'package)
 ;;emacs benchmark-init
-(require 'benchmark-init-loaddefs)
-(benchmark-init/activate)
+;;cd ~/.emacs.d/site-lisp/extensions/benchmark-init-el && make
+;;(require 'benchmark-init-loaddefs)
+;;(benchmark-init/activate)
 ;;melpa
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
