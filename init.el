@@ -136,8 +136,7 @@
 (require 'init-editorconfig)
 (require 'ox-latex-chinese)
 (oxlc/toggle-ox-latex-chinese t)
-(require 'expand-region)
-(global-set-key (kbd "C-=") 'er/expand-region)
+(require 'init-expand-region)
 (require 'init-clipmon)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
