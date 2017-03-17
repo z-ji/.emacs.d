@@ -138,6 +138,7 @@
 (oxlc/toggle-ox-latex-chinese t)
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
+(require 'init-clipmon)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
@@ -182,7 +183,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-latex-chinese org json-mode ox-twbs company dash magit))))
+    (clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-latex-chinese org json-mode ox-twbs company dash magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
