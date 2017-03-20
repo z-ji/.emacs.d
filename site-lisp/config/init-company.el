@@ -10,7 +10,7 @@
   (add-to-list 'company-backends 'company-ispell)
   ;; OPTIONAL, if `company-ispell-dictionary' is nil, `ispell-complete-word-dict' is used
   ;;  but I prefer hard code the dictionary path. That's more portable.
-  (setq company-ispell-dictionary (file-truename "~/.emacs.d/resources/english-words.txt")))
+  (setq company-ispell-dictionary (file-truename "~/.emacs.d/resources/words.txt")))
 (add-hook 'text-mode-hook 'text-mode-hook-setup)
 (defun toggle-company-ispell ()
   (interactive)
