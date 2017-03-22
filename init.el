@@ -138,6 +138,7 @@
 (oxlc/toggle-ox-latex-chinese t)
 (require 'init-expand-region)
 (require 'init-clipmon)
+(require 'init-show-paren)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
