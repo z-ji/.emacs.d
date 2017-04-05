@@ -139,6 +139,7 @@
 (require 'init-expand-region)
 (require 'init-clipmon)
 (require 'init-show-paren)
+(require 'init-plantuml)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;当前时间函数
@@ -183,7 +184,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-latex-chinese org json-mode ox-twbs company dash magit))))
+    (plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-latex-chinese org json-mode ox-twbs company dash magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
