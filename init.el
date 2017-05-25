@@ -137,7 +137,7 @@
 (require 'ox-latex-chinese)
 (oxlc/toggle-ox-latex-chinese t)
 (require 'init-expand-region)
-(require 'init-clipmon)
+;;(require 'init-clipmon)
 (require 'init-show-paren)
 (require 'init-plantuml)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
