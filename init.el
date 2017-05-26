@@ -140,8 +140,13 @@
 ;;(require 'init-clipmon)
 (require 'init-show-paren)
 (require 'init-plantuml)
+(require 'init-use-package)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
+(defun org-insert-now ()
+    "insert current date-time to current cursor."
+    (interactive)
+    (org-insert-heading-respect-content)
+    (insert (format-time-string "<%Y-%m-%d %a %T:%3N> ") (current-buffer)))
 (defun insert-now ()
     "insert current date-time to current cursor."
     (interactive)
@@ -188,7 +193,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-latex-chinese org json-mode ox-twbs company dash magit))))
+    (use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-latex-chinese org json-mode ox-twbs company dash magit))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
