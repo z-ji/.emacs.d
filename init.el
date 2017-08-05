@@ -147,6 +147,11 @@
     (interactive)
     (org-insert-heading-respect-content)
     (insert (format-time-string "<%Y-%m-%d %a %T:%3N> ") (current-buffer)))
+(defun org-insert-now-second ()
+    "insert current date-time to current cursor."
+    (interactive)
+    (org-insert-heading-respect-content)
+    (insert (format-time-string "<%Y-%m-%d %a %T> ") (current-buffer)))
 (defun insert-now ()
     "insert current date-time to current cursor."
     (interactive)
