@@ -1,5 +1,7 @@
 (global-set-key (kbd "C-c C-.") 'insert-now)
 (global-set-key (kbd "C-SPC") 'nil)
+;;elfeed
+(global-set-key (kbd "C-x w") 'elfeed)
 ;;Org Mode
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
