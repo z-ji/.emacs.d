@@ -32,6 +32,7 @@
     (define-key map (kbd "<C-left>")      'helm-ucs-persistent-backward)
     (define-key map (kbd "<C-right>")     'helm-ucs-persistent-forward)
     (define-key map (kbd "<C-return>")    'helm-ucs-persistent-insert)
+    (define-key map (kbd "C-c SPC")       'helm-ucs-persistent-insert-space)
     map)
   "Keymap for `helm-ucs'.")
 
@@ -90,27 +91,25 @@ Only math* symbols are collected."
           (helm-calculate-ucs-max-len)))
   (or helm-ucs--names
       (setq helm-ucs--names
-            (cl-loop for (n . v) in (ucs-names)
-                     for len = (length (format "#x%x:" v))
+            (cl-loop with pr = (make-progress-reporter
+                                "collecting ucs names"
+                                0 (length (ucs-names)))
+                     for (n . v) in (ucs-names)
+                     for count from 1
+                     for xcode = (format "#x%x:" v)
+                     for len = (length xcode)
                      for diff = (- (car helm-ucs--max-len) len)
                      for code = (format "(#x%x): " v)
                      for char = (propertize (format "%c" v)
                                             'face 'helm-ucs-char)
-                     unless (string= "" n) collect
+                     unless (or (string= "" n)
+                                (not (char-displayable-p (read xcode))))
+                     collect
                      (concat code (make-string diff ? )
-                             char "  " n)))))
+                             char "  " n)
+                     and do (progress-reporter-update pr count)))))
 
-(defun helm-ucs-forward-char (_candidate)
-  (with-helm-current-buffer
-    (forward-char 1)))
-
-(defun helm-ucs-backward-char (_candidate)
-  (with-helm-current-buffer
-    (forward-char -1)))
-
-(defun helm-ucs-delete-backward (_candidate)
-  (with-helm-current-buffer
-    (delete-char -1)))
+;; Actions (insertion)
 
 (defun helm-ucs-insert (candidate n)
   (when (string-match
@@ -135,6 +134,24 @@ Only math* symbols are collected."
     (helm-execute-persistent-action 'action-insert)))
 (put 'helm-ucs-persistent-insert 'helm-only t)
 
+;; Navigation in current-buffer (persistent)
+
+(defun helm-ucs-forward-char (_candidate)
+  (with-helm-current-buffer
+    (forward-char 1)))
+
+(defun helm-ucs-backward-char (_candidate)
+  (with-helm-current-buffer
+    (forward-char -1)))
+
+(defun helm-ucs-delete-backward (_candidate)
+  (with-helm-current-buffer
+    (delete-char -1)))
+
+(defun helm-ucs-insert-space (_candidate)
+  (with-helm-current-buffer
+    (insert " ")))
+
 (defun helm-ucs-persistent-forward ()
   (interactive)
   (with-helm-alive-p
@@ -156,6 +173,12 @@ Only math* symbols are collected."
     (helm-execute-persistent-action 'action-delete)))
 (put 'helm-ucs-persistent-delete 'helm-only t)
 
+(defun helm-ucs-persistent-insert-space ()
+  (interactive)
+  (with-helm-alive-p
+    (helm-attrset 'action-insert-space 'helm-ucs-insert-space)
+    (helm-execute-persistent-action 'action-insert-space)))
+
 (defvar helm-source-ucs
   (helm-build-in-buffer-source "Ucs names"
     :data #'helm-ucs-init
@@ -166,10 +189,8 @@ Only math* symbols are collected."
     (lambda (candidates _source) (sort candidates #'helm-generic-sort-fn))
     :action '(("Insert character" . helm-ucs-insert-char)
               ("Insert character name" . helm-ucs-insert-name)
-              ("Insert character code in hex" . helm-ucs-insert-code)
-              ("Forward char" . helm-ucs-forward-char)
-              ("Backward char" . helm-ucs-backward-char)
-              ("Delete char backward" . helm-ucs-delete-backward)))
+              ("Insert character code in hex" . helm-ucs-insert-code))
+    :keymap  helm-ucs-map)
   "Source for collecting `ucs-names' math symbols.")
 
 ;;;###autoload
@@ -180,12 +201,17 @@ Only math* symbols are collected."
         :buffer "*helm select xfont*"))
 
 ;;;###autoload
-(defun helm-ucs ()
-  "Preconfigured helm for `ucs-names' math symbols."
-  (interactive)
+(defun helm-ucs (arg)
+  "Preconfigured helm for `ucs-names'.
+
+Called with a prefix arg force reloading cache."
+  (interactive "P")
+  (when arg
+    (setq helm-ucs--names nil
+          helm-ucs--max-len nil
+          ucs-names nil))
   (let ((char (helm-aif (char-after) (string it))))
     (helm :sources 'helm-source-ucs
-          :keymap  helm-ucs-map
           :history 'helm-ucs-history
           :input (and char (multibyte-string-p char) char)
           :buffer "*helm ucs*")))

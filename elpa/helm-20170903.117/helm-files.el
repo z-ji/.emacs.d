@@ -631,9 +631,14 @@ Should not be used among other sources.")
   "bookmark handler for `helm-find-files'."
   (let ((fname (bookmark-prop-get bookmark 'filename))
         (presel (bookmark-prop-get bookmark 'presel)))
-    (helm-find-files-1 fname (if helm-ff-transformer-show-only-basename
-                                 (helm-basename presel)
-                                 presel))))
+    ;; Force tramp connection with `file-directory-p' before lauching
+    ;; hff otherwise the directory name is inserted on top before
+    ;; tramp starts and display candidates.  FNAME is here always a
+    ;; directory.
+    (when (file-directory-p fname)
+      (helm-find-files-1 fname (if helm-ff-transformer-show-only-basename
+                                   (helm-basename presel)
+                                 presel)))))
 
 (defun helm-ff-bookmark-set ()
   "Record `helm-find-files' session in bookmarks."
@@ -1881,14 +1886,10 @@ or when `helm-pattern' is equal to \"~/\"."
                                 (let ((sub (substitute-in-file-name match)))
                                   (if (file-directory-p sub)
                                       sub (replace-regexp-in-string "/\\'" "" sub))))
-                               (t (expand-file-name
-                                   (helm-substitute-in-filename helm-pattern)
-                                   ;; [Windows] On UNC paths "/" expand to current machine,
-                                   ;; so use the root of current Drive. (i.e "C:/")
-                                   (and (memq system-type '(windows-nt ms-dos))
-                                        (getenv "SystemDrive")) ; nil on Unix.
-                                   )))))
-             (if (file-directory-p input)
+                               (t (helm-ff--expand-substitued-pattern helm-pattern)))))
+             ;; `file-directory-p' returns t on "/home/me/." (issue #1844).
+             (if (and (file-directory-p input)
+                      (not (string-match-p "[^.]\\.\\'" input)))
                  (setq helm-ff-default-directory
                        (setq input (file-name-as-directory input)))
                  (setq helm-ff-default-directory (file-name-as-directory
@@ -1896,6 +1897,21 @@ or when `helm-pattern' is equal to \"~/\"."
              (with-helm-window
                (helm-set-pattern input)
                (helm-check-minibuffer-input)))))))
+
+(defun helm-ff--expand-file-name-no-dot (name &optional directory)
+  "Prevent expanding \"/home/user/.\" to \"/home/user\"."
+  ;; Issue #1844.
+  (concat (expand-file-name name directory)
+          (and (string-match "[^.]\\.\\'" name) "/.")))
+
+(defun helm-ff--expand-substitued-pattern (pattern)
+  (helm-ff--expand-file-name-no-dot
+   (helm-substitute-in-filename pattern)
+   ;; [Windows] On UNC paths "/" expand to current machine,
+   ;; so use the root of current Drive. (i.e "C:/")
+   (and (memq system-type '(windows-nt ms-dos))
+        (getenv "SystemDrive"))         ; nil on Unix.
+   ))
 
 (defun helm-substitute-in-filename (fname)
   "Substitute all parts of FNAME from start up to \"~/\" or \"/\".
@@ -2526,10 +2542,10 @@ Return candidates prefixed with basename of `helm-input' first."
         (if cand1 (cons cand1 all) all))))
 
 (defsubst helm-ff-boring-file-p (file)
+  ;; Prevent user doing silly thing like
+  ;; adding the dotted files to boring regexps (#924).
   (and (not (string-match "\\.$" file))
        (cl-loop for r in helm-boring-file-regexp-list
-                ;; Prevent user doing silly thing like
-                ;; adding the dotted files to boring regexps (#924).
                 thereis (string-match r file))))
 
 (defun helm-ff-filter-candidate-one-by-one (file)

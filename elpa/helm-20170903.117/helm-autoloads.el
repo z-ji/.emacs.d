@@ -62,12 +62,6 @@ only if external addressbook-bookmark package is installed.
 
 \(fn)" t nil)
 
-(autoload 'helm-addressbook-bookmarks "helm-bookmark" "\
-Preconfigured helm for addressbook bookmarks.
-Need addressbook-bookmark package as dependencie.
-
-\(fn)" t nil)
-
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "helm-bookmark" '("helm-" "bmkext-jump-" "bookmark")))
 
 ;;;***
@@ -376,9 +370,11 @@ Preconfigured `helm' to select Xfont.
 \(fn)" t nil)
 
 (autoload 'helm-ucs "helm-font" "\
-Preconfigured helm for `ucs-names' math symbols.
+Preconfigured helm for `ucs-names'.
 
-\(fn)" t nil)
+Called with a prefix arg force reloading cache.
+
+\(fn ARG)" t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "helm-font" '("helm-")))
 
