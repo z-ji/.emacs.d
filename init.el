@@ -211,3 +211,9 @@
 ;;                       :body (format "You have an appointment in %d minutes" 10)
 ;;                       :app-name "Emacs: Org"
 ;;                       :sound-name "alarm-clock-elapsed")
+
+;; fix error message in macOS :ls does not support --dired; see `dired-use-ls-dired' for more details.
+;; see https://stackoverflow.com/questions/25125200/emacs-error-ls-does-not-support-dired
+(when (eq system-type 'darwin)
+  (require 'ls-lisp)
+  (setq ls-lisp-use-insert-directory-program nil))
