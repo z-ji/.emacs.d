@@ -46,7 +46,6 @@
 ;;(setq default-directory (symbol-value 'default-directory-value) )
 ;;以 y/n代表 yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
-
 (menu-bar-mode -1)
 ;;Get visual indication of an exception
 ;;(setq visible-bell 1)
@@ -142,56 +141,8 @@
 (require 'init-plantuml)
 (require 'init-use-package)
 (require 'init-macOS)
+(require 'init-customized-functions)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;config external lisp;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun org-insert-now ()
-    "insert current date-time to current cursor."
-    (interactive)
-    (org-insert-heading-respect-content)
-    (insert (format-time-string "<%Y-%m-%d %a %T:%3N> ") (current-buffer)))
-(defun org-insert-now-second ()
-    "insert current date-time to current cursor."
-    (interactive)
-    (org-insert-heading-respect-content)
-    (insert (format-time-string "<%Y-%m-%d %a %T> ") (current-buffer)))
-(defun insert-now ()
-    "insert current date-time to current cursor."
-    (interactive)
-    (insert (format-time-string "<%Y-%m-%d %a %T:%3N>") (current-buffer)))
-;;当前时间函数
-(defun now-is ()
-    "Display current time."
-    (interactive)
-    (message (format-time-string "Now is %Y-%m-%d %a %T")))
-;; Ctrl-S-K delete line without kill
-(defun delete-line ()
-  (interactive)
-  (delete-region
-   (point)
-   (save-excursion (move-end-of-line 1) (point)))
-  (delete-char 1)
-)
-;;重定义C-W A-W 增加cut copy一行的功能
-(defun cut-line-or-region ()
-  "Cut the current line, or current text selection."
-  (interactive)
-  (if (use-region-p)
-      (kill-region (region-beginning) (region-end))
-    (kill-region (line-beginning-position) (line-beginning-position 2)) (message "cut-line-or-region")) )
-(defun copy-line-or-region ()
-  "Copy current line, or current text selection."
-  (interactive)
-  (if (use-region-p)
-      (kill-ring-save (region-beginning) (region-end))
-    (kill-ring-save (line-beginning-position) (line-beginning-position 2)) (message "copy-line-or-region")) )
-;;kill-other-buffers
-;;http://stackoverflow.com/questions/3417438/closing-all-other-buffers-in-emacs
-(defun kill-other-buffers ()
-    "Kill all other buffers."
-    (interactive)
-    (mapc 'kill-buffer
-          (delq (current-buffer)
-                (remove-if-not 'buffer-file-name (buffer-list)))))
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -200,14 +151,7 @@
  '(package-selected-packages
    (quote
     (elfeed with-editor helm-ag async use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region org json-mode ox-twbs company dash magit))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-(require 'notifications)
-
+;; (require 'notifications)
 ;; (notifications-notify :title "Achtung!"
 ;;                       :body (format "You have an appointment in %d minutes" 10)
 ;;                       :app-name "Emacs: Org"
