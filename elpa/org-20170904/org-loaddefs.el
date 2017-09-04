@@ -409,15 +409,13 @@ Mark current src block.
 
 ;;;***
 
-;;;### (autoloads nil "ob-keys" "ob-keys.el" (0 0 0 0))
+;;;### (autoloads nil "ob-keys" "ob-keys.el" "aef8e17375204895ffacafab4505b19f")
 ;;; Generated autoloads from ob-keys.el
 
 (autoload 'org-babel-describe-bindings "ob-keys" "\
 Describe all keybindings behind `org-babel-key-prefix'.
 
 \(fn)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ob-keys" '("org-babel-")))
 
 ;;;***
 
@@ -1363,7 +1361,7 @@ tree can be found.
 
 ;;;***
 
-;;;### (autoloads nil "org-element" "org-element.el" (0 0 0 0))
+;;;### (autoloads nil "org-element" "org-element.el" "568b2887facec6d9be309569fcbbcca6")
 ;;; Generated autoloads from org-element.el
 
 (autoload 'org-element-update-syntax "org-element" "\
@@ -1433,8 +1431,6 @@ Providing it allows for quicker computation.
 
 \(fn &optional ELEMENT)" nil nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-element" '("org-element-")))
-
 ;;;***
 
 ;;;### (autoloads nil "org-entities" "org-entities.el" (0 0 0 0))
@@ -1465,7 +1461,7 @@ Providing it allows for quicker computation.
 
 ;;;***
 
-;;;### (autoloads nil "org-feed" "org-feed.el" (0 0 0 0))
+;;;### (autoloads nil "org-feed" "org-feed.el" "608074d7ed60ce9f56348bfcce5183ec")
 ;;; Generated autoloads from org-feed.el
 
 (autoload 'org-feed-update-all "org-feed" "\
@@ -1490,11 +1486,9 @@ Show the raw feed buffer of a feed.
 
 \(fn FEED)" t nil)
 
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-feed" '("org-feed-")))
-
 ;;;***
 
-;;;### (autoloads nil "org-footnote" "org-footnote.el" (0 0 0 0))
+;;;### (autoloads nil "org-footnote" "org-footnote.el" "fab42c4fc8ca2850edd5b1a93b4e3679")
 ;;; Generated autoloads from org-footnote.el
 
 (autoload 'org-footnote-action "org-footnote" "\
@@ -1512,8 +1506,6 @@ With prefix arg SPECIAL, or when no footnote can be created,
 offer additional commands in a menu.
 
 \(fn &optional SPECIAL)" t nil)
-
-(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-footnote" '("org-footnote-")))
 
 ;;;***
 

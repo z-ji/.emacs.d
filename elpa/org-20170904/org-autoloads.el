@@ -181,6 +181,14 @@
 
 ;;;***
 
+;;;### (autoloads "actual autoloads are elsewhere" "ob-keys" "ob-keys.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ob-keys.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ob-keys" '("org-babel-")))
+
+;;;***
+
 ;;;### (autoloads nil "ob-latex" "ob-latex.el" (0 0 0 0))
 ;;; Generated autoloads from ob-latex.el
 
@@ -1038,6 +1046,14 @@ Try very hard to provide sensible version strings.
 
 ;;;***
 
+;;;### (autoloads "actual autoloads are elsewhere" "org-element"
+;;;;;;  "org-element.el" (0 0 0 0))
+;;; Generated autoloads from org-element.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-element" '("org-element-")))
+
+;;;***
+
 ;;;### (autoloads nil "org-entities" "org-entities.el" (0 0 0 0))
 ;;; Generated autoloads from org-entities.el
 
@@ -1063,6 +1079,22 @@ Try very hard to provide sensible version strings.
 ;;; Generated autoloads from org-faces.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-faces" '("org-")))
+
+;;;***
+
+;;;### (autoloads "actual autoloads are elsewhere" "org-feed" "org-feed.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from org-feed.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-feed" '("org-feed-")))
+
+;;;***
+
+;;;### (autoloads "actual autoloads are elsewhere" "org-footnote"
+;;;;;;  "org-footnote.el" (0 0 0 0))
+;;; Generated autoloads from org-footnote.el
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "org-footnote" '("org-footnote-")))
 
 ;;;***
 

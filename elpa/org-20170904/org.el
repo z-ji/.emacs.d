@@ -9141,7 +9141,7 @@ function is being called interactively."
 	     ;; The clock marker is lost when using `sort-subr'; mark
 	     ;; the clock with temporary `:org-clock-marker-backup'
 	     ;; text property.
-	     (when (and (eq (org-clocking-buffer) (current-buffer))
+	     (when (and (eq (org-clock-is-active) (current-buffer))
 			(<= start (marker-position org-clock-marker))
 			(>= end (marker-position org-clock-marker)))
 	       (org-with-silent-modifications
@@ -20243,6 +20243,7 @@ because, in this case the deletion might narrow the column."
     (org-check-before-invisible-edit 'delete-backward)
     (if (and (org-at-table-p)
 	     (eq N 1)
+	     (not (org-region-active-p))
 	     (string-match "|" (buffer-substring (point-at-bol) (point)))
 	     (looking-at ".*?|"))
 	(let ((pos (point))
