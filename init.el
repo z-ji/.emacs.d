@@ -134,8 +134,6 @@
 (require 'init-dino-dired-fixups)
 (require 'init-multi-term)
 (require 'init-editorconfig)
-(require 'ox-latex-chinese)
-(oxlc/toggle-ox-latex-chinese t)
 (require 'init-expand-region)
 ;;(require 'init-clipmon)
 (require 'init-show-paren)
