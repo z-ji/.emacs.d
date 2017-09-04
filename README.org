@@ -1,6 +1,18 @@
 #+TITLE: An emacs configuration
 * Install
-: curl -sSL https://raw.githubusercontent.com/ji-zhou/.emacs.d/master/install.sh | sh
+1. Install emacs, of course, I prefer build from source:
+   - build from source in macOS
+     #+BEGIN_SRC shell
+     git clone git://git.savannah.gnu.org/emacs.git
+     ./configure --without-pop
+     #see https://brew.sh/ to install brew
+     brew install autoconf automake
+     make
+     make install
+     #drop next-stemp/Emacs.app to Applications and you can see it in Launchpad
+     #+END_SRC
+2. install the configuration
+ : curl -sSL https://raw.githubusercontent.com/ji-zhou/.emacs.d/master/install.sh | sh
 * Local config
 To add your own customization, create a file ~/.emacs.d/site-lisp/config/init-local.el which looks like this:
 #+BEGIN_EXAMPLE
