@@ -9,7 +9,7 @@
      brew install autoconf automake
      make
      make install
-     #drop next-stemp/Emacs.app to Applications and you can see it in Launchpad
+     #drop next-step/Emacs.app to Applications and you can see it in Launchpad
      #+END_SRC
 2. install the configuration
  : curl -sSL https://raw.githubusercontent.com/ji-zhou/.emacs.d/master/install.sh | sh
