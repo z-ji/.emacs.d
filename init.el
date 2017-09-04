@@ -1,3 +1,8 @@
+;;conflict with (toggle-frame-maximized) in macOS, so must be here
+(tool-bar-mode -1)
+;; toggle-frame-fullscreen or toggle-frame-maximized should be the sooner the better
+;;(toggle-frame-fullscreen)
+(toggle-frame-maximized)
 ;;this will popup a window to ASKPASS in windows, and oprate on 'ECHO AREA' of emacs in linux
 (setenv "GIT_ASKPASS" "git-gui--askpass")
 ;;(defconst initial-buffer-choice-value "~/emacs/all.org" "启动时打开的buffer")
@@ -29,9 +34,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;avoid the warning message 'ad-handle-definition: `tramp-read-passwd' got redefined'
 (setq ad-redefinition-action 'accept)
-;;启动时最大化,置于此处以提高gui加载到完成全屏的速度
-;;(toggle-frame-maximized)
-(toggle-frame-fullscreen)
 ;;use for emacsclient
 (server-start)
 ;;melpa
@@ -44,7 +46,7 @@
 ;;(setq default-directory (symbol-value 'default-directory-value) )
 ;;以 y/n代表 yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
-(tool-bar-mode -1)
+
 (menu-bar-mode -1)
 ;;Get visual indication of an exception
 ;;(setq visible-bell 1)
