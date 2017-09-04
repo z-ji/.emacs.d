@@ -12,7 +12,8 @@
 (global-set-key (kbd "C-x C-S-f") 'find-file-root)
 ;;(fullscreen)
 (global-set-key [f9] 'toggle-frame-fullscreen)
-(global-set-key [f10] 'toggle-frame-maximized)
+;;use default <M-f10> to toggle-frame-maximized
+;;(global-set-key [f10] 'toggle-frame-maximized)
 (global-set-key (kbd "C-S-k") 'delete-line);; Ctrl-K with no kill
 
 (global-set-key (kbd "C-w") 'cut-line-or-region) ; cut
