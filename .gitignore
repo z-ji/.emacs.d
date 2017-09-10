@@ -16,3 +16,4 @@ init-local.el
 /server/server
 .emacs.desktop
 .emacs.desktop.lock
+helm-doc.org
