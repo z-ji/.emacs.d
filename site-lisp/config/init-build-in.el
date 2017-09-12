@@ -51,7 +51,7 @@
 (setq-default fill-column 72)
 ;;recentf config
 (setq recentf-max-menu-items 999)
-(setq recentf-max-saved-items 999)
+(setq recentf-max-saved-items 19)
 ;;set default file encoding
 ;; (set-language-environment "UTF-8")
 ;; (set-default-coding-systems 'utf-8)
