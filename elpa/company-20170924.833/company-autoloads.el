@@ -305,6 +305,26 @@ File paths with spaces are only supported inside strings.
 
 ;;;***
 
+;;;### (autoloads nil "company-tng" "company-tng.el" (0 0 0 0))
+;;; Generated autoloads from company-tng.el
+
+(autoload 'company-tng-frontend "company-tng" "\
+When the user changes the selection at least once, this
+frontend will display the candidate in the buffer as if it's
+already there and any key outside of `company-active-map' will
+confirm the selection and finish the completion.
+
+\(fn COMMAND)" nil nil)
+
+(autoload 'company-tng-configure-default "company-tng" "\
+Applies the default configuration to enable company-tng.
+
+\(fn)" nil nil)
+
+(if (fboundp 'register-definition-prefixes) (register-definition-prefixes "company-tng" '("company-tng--")))
+
+;;;***
+
 ;;;### (autoloads nil "company-xcode" "company-xcode.el" (0 0 0 0))
 ;;; Generated autoloads from company-xcode.el
 
