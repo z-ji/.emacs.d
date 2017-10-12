@@ -313,8 +313,13 @@ bisect run'.
 ;;; Generated autoloads from magit-blame.el
  (autoload 'magit-blame-popup "magit-blame" nil t)
 
+(autoload 'magit-blame-reverse "magit-blame" "\
+For each line show the subsequent revision that removes it.
+
+\(fn REVISION FILE &optional ARGS)" t nil)
+
 (autoload 'magit-blame "magit-blame" "\
-Display edit history of FILE up to REVISION.
+For each line show the revision that last touched it.
 
 Interactively blame the file being visited in the current buffer.
 If the buffer visits a revision of that file, then blame up to
