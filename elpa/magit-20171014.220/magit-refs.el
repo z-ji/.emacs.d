@@ -219,9 +219,8 @@ Type \\[magit-reset] to reset `HEAD' to the commit at point.
     (setq ref "HEAD"))
   (unless (magit-rev-verify ref)
     (setq magit-refs-show-commit-count nil))
-  (setq header-line-format
-        (propertize (format " %s %s" ref (mapconcat #'identity args " "))
-                    'face 'magit-header-line))
+  (magit-set-header-line-format
+   (format "%s %s" ref (mapconcat #'identity args " ")))
   (magit-insert-section (branchbuf)
     (run-hooks 'magit-refs-sections-hook)))
 
@@ -419,9 +418,10 @@ line is inserted at all."
   "Insert sections showing all local branches."
   (magit-insert-section (local nil)
     (magit-insert-heading "Branches:")
-    (dolist (line (magit-git-lines "branch" "--format=\
+    (dolist (line (magit-git-lines "for-each-ref" "--format=\
 %(HEAD)%00%(refname:short)%00%(objectname:short)%00%(subject)%00\
 %(upstream:short)%00%(upstream)%00%(upstream:track,nobracket)"
+                                   "refs/heads"
                                    (cadr magit-refresh-args)))
       (pcase-let ((`(,head ,branch ,hash ,message
                            ,upstream ,uref ,utrack)
@@ -442,9 +442,9 @@ line is inserted at all."
               (push (magit-get "remote" remote "pushurl")))
           (format "%s (%s):" (capitalize remote)
                   (concat pull (and pull push ", ") push))))
-      (dolist (line (magit-git-lines "branch" "-r" "--format=\
+      (dolist (line (magit-git-lines "for-each-ref" "--format=\
 %(symref:short)%00%(refname:short)%00%(objectname:short)%00%(subject)"
-                                     "--list" (concat remote "/*")
+                                     (concat "refs/remotes/" remote)
                                      (cadr magit-refresh-args)))
         (pcase-let ((`(,symref ,branch ,hash ,message)
                      (-replace "" nil (split-string line "\0"))))

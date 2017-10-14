@@ -135,7 +135,7 @@ defaulting to the tag at point.
  (autoload 'magit-run-popup "magit" nil t)
 
 (autoload 'magit-git-command "magit" "\
-Execute COMMAND asynchonously; display output.
+Execute COMMAND asynchronously; display output.
 
 Interactively, prompt for COMMAND in the minibuffer. \"git \" is
 used as initial input, but can be deleted to run another command.
@@ -146,7 +146,7 @@ of the current working tree, otherwise in `default-directory'.
 \(fn COMMAND)" t nil)
 
 (autoload 'magit-git-command-topdir "magit" "\
-Execute COMMAND asynchonously; display output.
+Execute COMMAND asynchronously; display output.
 
 Interactively, prompt for COMMAND in the minibuffer. \"git \" is
 used as initial input, but can be deleted to run another command.
@@ -157,7 +157,7 @@ working tree.
 \(fn COMMAND)" t nil)
 
 (autoload 'magit-shell-command "magit" "\
-Execute COMMAND asynchonously; display output.
+Execute COMMAND asynchronously; display output.
 
 Interactively, prompt for COMMAND in the minibuffer.  With a
 prefix argument COMMAND is run in the top-level directory of
@@ -166,7 +166,7 @@ the current working tree, otherwise in `default-directory'.
 \(fn COMMAND)" t nil)
 
 (autoload 'magit-shell-command-topdir "magit" "\
-Execute COMMAND asynchonously; display output.
+Execute COMMAND asynchronously; display output.
 
 Interactively, prompt for COMMAND in the minibuffer.  COMMAND
 is run in the top-level directory of the current working tree.
