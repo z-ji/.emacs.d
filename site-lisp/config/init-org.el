@@ -30,6 +30,8 @@
 (setq org-log-note-clock-out t)
 ;;Ignore section-numbers when export to other files
 (setq org-export-with-section-numbers nil)
+;;; https://emacs.stackexchange.com/questions/17796/emacs-tea-time-is-supposed-to-be-integrated-in-org-mode-but-apparently-its-no/17849#17849
+;;; https://emacs.stackexchange.com/questions/34746/how-to-get-an-audible-feedback-when-the-current-task-is-overrun/34750
 (setq org-clock-sound "~/.emacs.d/alarm.wav")
 (setq org-html-preamble-format '(("en" "<a class=\"a_1\" href=\"\\\">首页</a><a class=\"a_none\">需求决定一切，一切问题都是需求问题</a>")))
 (setq org-html-postamble t)
