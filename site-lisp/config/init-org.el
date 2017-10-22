@@ -25,7 +25,7 @@
         (plantuml . t)))
 (setq org-plantuml-jar-path "~/.emacs.d/resources/plantuml.jar")
 ;;log closing item
-(setq org-log-done 'time)
+(setq org-log-done 'note)
 ;;record an additional note together with the clock-out timestamp
 (setq org-log-note-clock-out t)
 ;;Ignore section-numbers when export to other files
