@@ -23,16 +23,19 @@
 ;;滚动条
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 ;;(which-function-mode 1)                 ;在mode line上显示当前光标在哪个函数体内部
-(blink-cursor-mode -1)                  ;指针不闪动
+
+;;;cusor configuration
+(set-default 'cursor-type 'bar)
+;;(blink-cursor-mode -1)
+(set-cursor-color "#528bff")
+(global-hl-line-mode 1)
+
 ;;(setq inhibit-startup-screen t)
 ;;(setq initial-buffer-choice (symbol-value 'initial-buffer-choice-value)) ;;值改为变量
 ;;highlight current line
-(global-hl-line-mode 0)
 (setq global-hl-line-sticky-flag 1);;默认值为nil
 ;; To customize the background color
 ;;(set-face-background 'hl-line "red")
-;;设置光标类型
-(set-default 'cursor-type 'bar)
 ;;设置visual-line-mode为全局的,一行字数超过当前窗口大小时换行显示
 ;;(add-hook 'text-mode-hook 'turn-on-visual-line-mode)全局visual-line-mode的另一种方式
 ;;(setq global-visual-line-mode t)全局无效
