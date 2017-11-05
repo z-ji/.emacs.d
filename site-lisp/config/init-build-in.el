@@ -28,7 +28,7 @@
 (set-default 'cursor-type 'bar)
 ;;(blink-cursor-mode -1)
 (set-cursor-color "#528bff")
-(global-hl-line-mode 1)
+;;(global-hl-line-mode 1)
 
 ;;(setq inhibit-startup-screen t)
 ;;(setq initial-buffer-choice (symbol-value 'initial-buffer-choice-value)) ;;值改为变量
