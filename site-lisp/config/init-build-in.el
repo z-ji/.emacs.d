@@ -15,6 +15,8 @@
 ;;(setq default-directory (symbol-value 'default-directory-value) )
 ;;以 y/n代表 yes/no
 (fset 'yes-or-no-p 'y-or-n-p)
+;;;avoid 'Recursively delete tmp?' prompt
+(setq dired-recursive-deletes 'always)
 (menu-bar-mode -1)
 ;;Get visual indication of an exception
 ;;(setq visible-bell 1)
