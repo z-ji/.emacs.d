@@ -1,3 +1,4 @@
+(global-set-key (kbd "M-g s") 'helm-grep-do-git-grep)
 (global-set-key (kbd "C-c m") 'move-to-middle-of-line)
 (global-set-key (kbd "C-x C-j") 'dired-jump)
 
