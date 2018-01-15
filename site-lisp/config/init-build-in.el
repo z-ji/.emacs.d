@@ -84,6 +84,8 @@
 (setq select-active-regions nil)
 (global-auto-revert-mode 1)
 (setq auto-revert-interval 1)
+;;;enable narrow-to-page
+(put 'narrow-to-page 'disabled nil)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (provide 'init-build-in)
