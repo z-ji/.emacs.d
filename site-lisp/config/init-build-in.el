@@ -34,15 +34,18 @@
 
 ;;(setq inhibit-startup-screen t)
 ;;(setq initial-buffer-choice (symbol-value 'initial-buffer-choice-value)) ;;值改为变量
-;;highlight current line
-(setq global-hl-line-sticky-flag 1);;默认值为nil
-;; To customize the background color
+
+;;;highlight current line, default is nil
+(setq global-hl-line-sticky-flag 1)
+
+;;;To customize the background color
 ;;(set-face-background 'hl-line "red")
-;;设置visual-line-mode为全局的,一行字数超过当前窗口大小时换行显示
+
+;;;设置visual-line-mode为全局的,一行字数超过当前窗口大小时换行显示
 ;;(add-hook 'text-mode-hook 'turn-on-visual-line-mode)全局visual-line-mode的另一种方式
-;;(setq global-visual-line-mode t)全局无效
-;;(global-visual-line-mode t)
-;;让mode line显示列数(行数为默认显示)
+(global-visual-line-mode t)
+
+;;;让mode line显示列数(行数为默认显示)
 (column-number-mode t)
 ;;; 在mode-line显示当前Buffer的大小
 ;;(size-indication-mode 1)
