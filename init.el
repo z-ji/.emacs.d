@@ -34,6 +34,7 @@
 (eval-when-compile (require 'cl))
 (require 'init-local nil t)
 (require 'init-highlight-parentheses)
+(require 'init-nord-theme)
 ;;(require 'init-moe-theme)
 (require 'init-font)
 (require 'init-async)
