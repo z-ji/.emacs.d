@@ -3,7 +3,7 @@
 (org-clock-persistence-insinuate)
 ;;org todo keywords
 (setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)")
-                          (sequence "QUESTION(q)" "TASK(T)" "|" "GET" "ANSWER" "UPDATED(U)" "UNDERSTAND(u)" "READ(r)" "REVIEWED(v)" "KONWLEDGE(k)" "NOTE(n)" "FINISHED(f)" "有点高超(G)")
+                          (sequence "QUESTION(q)" "TASK(T)" "|" "THOUGHT" "GET" "ANSWER" "UPDATED(U)" "UNDERSTAND(u)" "READ(r)" "REVIEWED(v)" "KONWLEDGE(k)" "NOTE(n)" "FINISHED(f)" "有点高超(G)")
                           (sequence "TO SHARE(s)" "BUG(b)" "KNOWNCAUSE(k)" "WARN(w)" "|" "FIXED(f)")
                           (sequence "|" "CLOSED(c)" "CANCELED(C)")))
 (add-hook 'message-mode-hook 'turn-on-orgstruct)
