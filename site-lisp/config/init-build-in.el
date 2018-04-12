@@ -89,6 +89,7 @@
 (setq auto-revert-interval 1)
 ;;;enable narrow-to-page
 (put 'narrow-to-page 'disabled nil)
+(setq large-file-warning-threshold 16666666)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (provide 'init-build-in)
