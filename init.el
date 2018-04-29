@@ -25,7 +25,7 @@
   ;; For important compatibility libraries like cl-lib
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 ;;Load Emacs Lisp packages, and activate them.
-(package-initialize)
+(when (version< emacs-version "27.0") (package-initialize))
 ;;;------package config end------
 
 ;;;------modular config start------
@@ -57,7 +57,7 @@
 ;;(require 'init-clipmon)
 ;;(require 'init-show-paren)
 (require 'init-plantuml)
-(require 'init-use-package)
+;;(require 'init-use-package)
 (require 'init-macOS)
 (require 'init-customized-functions)
 (require 'init-build-in)
