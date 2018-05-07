@@ -9,5 +9,6 @@
   (message "keymap of org-timer-start has changed to C-c C-x C-0"))
 (bind-key* "C-c C-x 0" 'org-timer-start-keymap-hint)
 (bind-key* "C-c C-x C-0" 'org-timer-start)
+(bind-key* "C-c C--" 'org-toggle-heading)
 (provide 'init-use-package)
 
