@@ -23,8 +23,12 @@
         (calc . t)
         (latex . t)
         (plantuml . t)))
+
 ;;org agenda: show last 7 days enties
 (setq org-agenda-start-day "-7d")
+(setq org-agenda-start-on-weekday nil)
+(setq org-agenda-span 'fortnight)
+
 (setq org-plantuml-jar-path "~/.emacs.d/resources/plantuml.jar")
 ;;log closing item
 (setq org-log-done 'note)
