@@ -4,7 +4,10 @@
 ;;       (set-fontset-font (frame-parameter nil 'font) 'unicode (eval
 ;;                                                               emacs-font-name))))
 ;;---setting font for emacsclient -c some_files, will also affect emacs main frame, and make font configuration above invalid---
-(setq default-frame-alist '((font . "Monaco-14")
+
+;;;default font for macOS
+(setq default-frame-alist '((font . "Menlo-16")
+;;(setq default-frame-alist '((font . "Monaco-16")
 ;;(setq default-frame-alist '((font . "Noto Sans Mono CJK sc Regular-14")
                             ;;(width . 160) (height . 40)
                             ))
