@@ -10,5 +10,11 @@
 (bind-key* "C-c C-x 0" 'org-timer-start-keymap-hint)
 (bind-key* "C-c C-x C-0" 'org-timer-start)
 (bind-key* "C-c C--" 'org-toggle-heading)
+
+;; using org bullets in org-mode
+(use-package org-bullets
+  :ensure t
+  :config
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 (provide 'init-use-package)
 
