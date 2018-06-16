@@ -1,6 +1,7 @@
 (bind-key* "<C-return>" 'org-insert-now)
 (bind-key* "<C-M-return>" 'org-insert-now-second)
-(bind-key* "C-S-/" 'comment-or-uncomment-region)
+(bind-key* "C-/" 'comment-line)
+(bind-key* "C-?" 'comment-or-uncomment-region)
 
 ;;;TODO only in org-mode
 (defun org-timer-start-keymap-hint()
