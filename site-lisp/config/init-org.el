@@ -49,4 +49,6 @@
     (org-todo (if (= n-not-done 0) "DONE" "TODO"))))
 (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
+;;avoid 'Evaluate this plantuml code block on your system? (y or n) y'
+(setq org-confirm-babel-evaluate nil)
 (provide 'init-org)
