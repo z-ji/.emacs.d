@@ -1,3 +1,6 @@
+;; place here because it will not affect files that are loaded before the customization are read
+(setq load-prefer-newer t)
+
 ;;conflict with (toggle-frame-maximized) in macOS, so must be here
 (tool-bar-mode -1)
 ;; toggle-frame-fullscreen or toggle-frame-maximized should be the sooner the better
