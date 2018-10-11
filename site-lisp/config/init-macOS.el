@@ -7,6 +7,8 @@
 (setq ns-pop-up-frames nil)
 ;;解决中文输入法光标向前闪烁的问题
 (setq redisplay-dont-pause nil)
+;;Avoid CMD + H conflict in Emacs Mac Port, see https://emacs.stackexchange.com/questions/14823/how-to-disable-command-h-hide-in-emacs-mac-port-railwaycat
+(setq mac-pass-command-to-system nil)
 
 ;; fix error message in macOS :ls does not support --dired; see `dired-use-ls-dired' for more details.
 ;; see https://stackoverflow.com/questions/25125200/emacs-error-ls-does-not-support-dired
