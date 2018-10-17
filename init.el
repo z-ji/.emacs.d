@@ -58,7 +58,7 @@
 (require 'init-editorconfig)
 (require 'init-expand-region)
 ;;(require 'init-clipmon)
-;;(require 'init-show-paren)
+(require 'init-show-paren)
 (require 'init-plantuml)
 (require 'init-use-package)
 (require 'init-macOS)
