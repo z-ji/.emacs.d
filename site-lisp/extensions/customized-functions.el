@@ -18,6 +18,10 @@
   "insert current date-time to current cursor."
   (interactive)
   (insert (format-time-string "<%Y-%m-%d %a %T:%3N>") (current-buffer)))
+(defun insert-now-second ()
+  "insert current date-time to current cursor."
+  (interactive)
+  (insert (format-time-string "<%Y-%m-%d %a %T>") (current-buffer)))
 ;;当前时间函数
 (defun now-is ()
   "Display current time."
