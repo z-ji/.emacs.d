@@ -51,4 +51,10 @@
 
 ;;avoid 'Evaluate this plantuml code block on your system? (y or n) y'
 (setq org-confirm-babel-evaluate nil)
+
+;;priority settings
+(setq org-highest-priority ?A)
+(setq org-lowest-priority ?D)
+(setq org-default-priority ?D)
+
 (provide 'init-org)
