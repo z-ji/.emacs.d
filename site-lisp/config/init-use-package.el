@@ -1,3 +1,5 @@
+(bind-key* "<C-[>" 'backward-sexp)
+(bind-key* "<C-]>" 'forward-sexp)
 (bind-key* "<C-return>" 'org-insert-now-second)
 (bind-key* "<C-M-return>" 'org-insert-now)
 (bind-key* "C-/" 'comment-line)
@@ -12,6 +14,7 @@
 (bind-key* "C-c C-x C-0" 'org-timer-start)
 (bind-key* "C-c C--" 'org-toggle-heading)
 (bind-key* "C-M-l" 'json-pretty-print)
+
 
 ;; using org bullets in org-mode
 ;; (use-package org-bullets
