@@ -20,4 +20,7 @@
       ;;;Max length of buffer names
       helm-buffer-max-length 70)
 (setq helm-external-programs-associations (quote (("pdf" . "open"))))
+
+;;use RG instead of AG
+(setq helm-grep-ag-command "rg --color=always --smart-case --no-heading --line-number %s %s %s")
 (provide 'init-helm)

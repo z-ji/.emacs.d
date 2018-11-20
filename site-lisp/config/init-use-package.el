@@ -14,7 +14,7 @@
 (bind-key* "C-c C-x C-0" 'org-timer-start)
 (bind-key* "C-c C--" 'org-toggle-heading)
 (bind-key* "C-M-l" 'json-pretty-print)
-
+(bind-key* "M-g s" 'helm-do-grep-ag)
 
 ;; using org bullets in org-mode
 ;; (use-package org-bullets
