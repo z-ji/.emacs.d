@@ -1,6 +1,9 @@
 ;;Org Mode
-(setq org-clock-persist 'history)
-(org-clock-persistence-insinuate)
+
+;;;disable because of the slow init time
+;;(setq org-clock-persist 'history)
+;;(org-clock-persistence-insinuate)
+
 ;;org todo keywords
 (setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)")
                           (sequence "QUESTION(q)" "TASK(T)" "PROBLEM" "|" "THOUGHT" "GET" "ANSWER" "UPDATED(U)" "UNDERSTAND(u)" "READ(r)" "REVIEWED(v)" "KONWLEDGE(k)" "NOTE(n)" "FINISHED(f)" "有点高超(G)")
