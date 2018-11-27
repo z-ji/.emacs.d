@@ -4,11 +4,9 @@
 ;;(setq org-clock-persist 'history)
 ;;(org-clock-persistence-insinuate)
 
-;;org todo keywords
-(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)")
-                          (sequence "QUESTION(q)" "TASK(T)" "PROBLEM" "|" "THOUGHT" "GET" "ANSWER" "UPDATED(U)" "UNDERSTAND(u)" "READ(r)" "REVIEWED(v)" "KONWLEDGE(k)" "NOTE(n)" "FINISHED(f)" "有点高超(G)")
-                          (sequence "TO SHARE(s)" "BUG(b)" "KNOWNCAUSE(k)" "WARN(w)" "|" "FIXED(f)")
-                          (sequence "|" "CLOSED(c)" "CANCELED(C)")))
+;;org TODO keywordso
+(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "GET" "CLOSED(c)")
+                          ))
 (add-hook 'message-mode-hook 'turn-on-orgstruct)
 (add-hook 'message-mode-hook 'turn-on-orgstruct++)
 ;;---------Org-mode export html with mathjax-----
