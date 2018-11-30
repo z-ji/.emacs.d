@@ -70,6 +70,7 @@
 (require 'init-yaml)
 (require 'init-restclient)
 (require 'init-exec-path-from-shell)
+(require 'init-org-section-numbers)
 ;;;------modular config end------
 
 (custom-set-variables
@@ -87,3 +88,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
