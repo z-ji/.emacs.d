@@ -10,12 +10,14 @@
 ;;;frame-notice-user-settings: Invalid font: format, "%s-%s", (eval emacs-font-name), (eval emacs-font-size)
 ;;(setq default-frame-alist '((font . (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))))
 
-(setq default-frame-alist '((font . "Menlo-14")
-;;(setq default-frame-alist '((font . "Monaco-16")
-;;(setq default-frame-alist '((font . "Noto Sans Mono CJK sc Regular-14")
+;;;working for `emacsclient -c aFile`
+;;(setq default-frame-alist '((font . "Menlo-14")
                             ;;(width . 160) (height . 40)
-                            ))
+;;                            ))
 
 ;;(add-to-list 'default-frame-alist '(font . "Menlo-14"))
+
+;;;not working for `emacsclient -c aFile`
+(set-default-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
 
 (provide 'init-font)
