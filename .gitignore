@@ -1,6 +1,7 @@
 *#
 *~
 *.elc
+transient/
 .DS_Store
 .emacs.desktop
 .emacs.desktop.lock
@@ -17,3 +18,4 @@ eshell
 deepin-emacs
 semanticdb
 url
+
