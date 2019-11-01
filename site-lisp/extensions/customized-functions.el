@@ -83,4 +83,9 @@
   (interactive)
   (org-sort-entries nil ?f #'my/org-sort-key))
 
+(defun insert-backquote-quote-by-pair ()
+  "insert backquote quote by pair"
+  (interactive)
+  (xah-insert-bracket-pair "`" "`"))
+
 (provide 'customized-functions)

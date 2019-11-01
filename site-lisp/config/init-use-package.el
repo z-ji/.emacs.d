@@ -4,6 +4,7 @@
 (bind-key* "<C-M-return>" 'org-insert-now)
 (bind-key* "C-/" 'comment-line)
 (bind-key* "C-?" 'comment-or-uncomment-region)
+(bind-key* "C-`" 'insert-backquote-quote-by-pair)
 
 ;;;TODO only in org-mode
 (defun org-timer-start-keymap-hint()
