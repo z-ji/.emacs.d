@@ -37,6 +37,14 @@
 (setq org-log-note-clock-out t)
 ;;see https://www.gnu.org/software/emacs/manual/html_node/org/Tracking-TODO-state-changes.html#fn-2
 (setq org-log-into-drawer t)
+
+;;------org-modules------
+(setq org-modules'(org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m))
+;;org-habit
+(setq org-habit-graph-column 80)
+(setq org-habit-show-habits-only-for-today nil)
+;;------org-modules------
+
 ;;Ignore section-numbers when export to other files
 (setq org-export-with-section-numbers nil)
 ;;; https://emacs.stackexchange.com/questions/17796/emacs-tea-time-is-supposed-to-be-integrated-in-org-mode-but-apparently-its-no/17849#17849
