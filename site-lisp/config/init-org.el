@@ -35,6 +35,8 @@
 (setq org-log-done 'note)
 ;;record an additional note together with the clock-out timestamp
 (setq org-log-note-clock-out t)
+;;see https://www.gnu.org/software/emacs/manual/html_node/org/Tracking-TODO-state-changes.html#fn-2
+(setq org-log-into-drawer t)
 ;;Ignore section-numbers when export to other files
 (setq org-export-with-section-numbers nil)
 ;;; https://emacs.stackexchange.com/questions/17796/emacs-tea-time-is-supposed-to-be-integrated-in-org-mode-but-apparently-its-no/17849#17849
