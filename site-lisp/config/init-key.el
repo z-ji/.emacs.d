@@ -52,6 +52,7 @@
 (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB works in terminal
 (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
 (global-set-key (kbd "C-h r") 'helm-info-emacs)
+(global-set-key (kbd "C-c i") 'helm-semantic-or-imenu)
 ;;C-<DEL>
 (define-key helm-find-files-map
   [(control backspace)] #'helm-find-files-up-one-level)
