@@ -16,4 +16,7 @@
 ;; 	(progn (require 'man)
 ;; 	       (man (match-string 1 node)))
 ;;       ad-do-it)))
+
+;; show author, see https://emacs.stackexchange.com/questions/53341/how-to-show-commit-authors-in-magit-section-recent-commits
+(setq magit-toggle-margin t)
 (provide 'init-magit)
