@@ -30,6 +30,9 @@
 (setq org-agenda-start-on-weekday nil)
 (setq org-agenda-span 'fortnight)
 
+;; see https://orgmode.org/manual/Deadlines-and-scheduling.html
+(setq org-deadline-warning-days 30)
+
 (setq org-plantuml-jar-path "~/.emacs.d/resources/plantuml.jar")
 ;;log closing item
 (setq org-log-done 'note)
