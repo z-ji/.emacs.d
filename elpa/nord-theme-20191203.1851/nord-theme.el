@@ -6,7 +6,7 @@
 ;; Title: Nord Theme
 ;; Project: nord-emacs
 ;; Version: 0.4.0
-;; Package-Version: 20190616.1757
+;; Package-Version: 20191203.1851
 ;; URL: https://github.com/arcticicestudio/nord-emacs
 ;; Author: Arctic Ice Studio <development@arcticicestudio.com>
 ;; Package-Requires: ((emacs "24"))
@@ -628,14 +628,14 @@
     `(neo-vc-user-face ((,class (:foreground ,nord4))))
 
     ;; > Org
-    `(org-level-1 ((,class (:foreground ,nord8 :weight bold))))
-    `(org-level-2 ((,class (:inherit org-level-1))))
-    `(org-level-3 ((,class (:inherit org-level-1))))
-    `(org-level-4 ((,class (:inherit org-level-1))))
-    `(org-level-5 ((,class (:inherit org-level-1))))
-    `(org-level-6 ((,class (:inherit org-level-1))))
-    `(org-level-7 ((,class (:inherit org-level-1))))
-    `(org-level-8 ((,class (:inherit org-level-1))))
+    `(org-level-1 ((,class (:foreground ,nord7 :weight extra-bold))))
+    `(org-level-2 ((,class (:foreground ,nord8 :weight bold))))
+    `(org-level-3 ((,class (:foreground ,nord9 :weight semi-bold))))
+    `(org-level-4 ((,class (:foreground ,nord10 :weight normal))))
+    `(org-level-5 ((,class (:inherit org-level-4))))
+    `(org-level-6 ((,class (:inherit org-level-4))))
+    `(org-level-7 ((,class (:inherit org-level-4))))
+    `(org-level-8 ((,class (:inherit org-level-4))))
     `(org-agenda-structure ((,class (:foreground ,nord9))))
     `(org-agenda-date ((,class (:foreground ,nord8 :underline nil))))
     `(org-agenda-done ((,class (:foreground ,nord14))))

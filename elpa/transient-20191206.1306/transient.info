@@ -44,7 +44,7 @@ reading a new value in the minibuffer.
    Calling a suffix command usually causes the transient to be exited
 but suffix commands can also be configured to not exit the transient.
 
-This manual is for Transient version 0.1.0 (v0.1.0-115-gad7f255+1).
+This manual is for Transient version 0.1.0 (v0.1.0-129-gc1ae1ee+1).
 
      Copyright (C) 2018-2019 Jonas Bernoulli <jonas@bernoul.li>
 
@@ -739,6 +739,14 @@ File: transient.info,  Node: Other Options,  Next: Modifying Existing Transients
      multiple suffixes to share a common key binding, provided the
      predicates of those suffixes prevent that more than one of them is
      enabled at a time.
+
+ -- User Option: transient-force-fixed-pitch
+
+     This option controls whether to force the use of a monospaced font
+     in popup buffer.  Even if you use a proportional font for the
+     ‘default’ face, you might still want to use a monospaced font in
+     transient’s popup buffer.  Setting this option to t causes
+     ‘default’ to be remapped to ‘fixed-pitch’ in that buffer.
 
 
 File: transient.info,  Node: Modifying Existing Transients,  Next: Defining New Commands,  Prev: Other Options,  Up: Top
@@ -2365,6 +2373,7 @@ Appendix E Variable Index
 * transient-detect-key-conflicts:        Other Options.       (line 136)
 * transient-display-buffer-action:       Other Options.       (line  46)
 * transient-enable-popup-navigation:     Other Options.       (line  28)
+* transient-force-fixed-pitch:           Other Options.       (line 150)
 * transient-highlight-mismatched-keys:   Other Options.       (line  95)
 * transient-history-file:                Using History.       (line  33)
 * transient-history-limit:               Using History.       (line  38)
@@ -2394,34 +2403,34 @@ Node: Getting Help for Suffix Commands18310
 Node: Enabling and Disabling Suffixes19703
 Node: Other Commands22993
 Node: Other Options23949
-Node: Modifying Existing Transients30563
-Node: Defining New Commands33967
-Node: Defining Transients34303
-Node: Binding Suffix and Infix Commands36735
-Node: Group Specifications37590
-Node: Suffix Specifications40923
-Node: Defining Suffix and Infix Commands44490
-Node: Using Infix Arguments47675
-Node: Transient State49895
-Node: Classes and Methods55768
-Node: Group Classes57982
-Node: Group Methods59899
-Node: Prefix Classes60544
-Node: Suffix Classes61636
-Node: Suffix Methods63880
-Node: Suffix Value Methods64201
-Node: Suffix Format Methods66961
-Node: Prefix Slots68413
-Node: Suffix Slots70890
-Node: Predicate Slots73741
-Node: Related Abstractions and Packages74989
-Node: Comparison With Prefix Keys and Prefix Arguments75276
-Node: Comparison With Other Packages85588
-Node: FAQ89779
-Node: Keystroke Index93513
-Node: Command Index95147
-Node: Function Index96934
-Node: Variable Index101091
+Node: Modifying Existing Transients30960
+Node: Defining New Commands34364
+Node: Defining Transients34700
+Node: Binding Suffix and Infix Commands37132
+Node: Group Specifications37987
+Node: Suffix Specifications41320
+Node: Defining Suffix and Infix Commands44887
+Node: Using Infix Arguments48072
+Node: Transient State50292
+Node: Classes and Methods56165
+Node: Group Classes58379
+Node: Group Methods60296
+Node: Prefix Classes60941
+Node: Suffix Classes62033
+Node: Suffix Methods64277
+Node: Suffix Value Methods64598
+Node: Suffix Format Methods67358
+Node: Prefix Slots68810
+Node: Suffix Slots71287
+Node: Predicate Slots74138
+Node: Related Abstractions and Packages75386
+Node: Comparison With Prefix Keys and Prefix Arguments75673
+Node: Comparison With Other Packages85985
+Node: FAQ90176
+Node: Keystroke Index93910
+Node: Command Index95544
+Node: Function Index97331
+Node: Variable Index101488
 
 End Tag Table
 
