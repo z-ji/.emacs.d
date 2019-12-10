@@ -269,7 +269,7 @@
 
    (requires-pattern
     :initarg :requires-pattern
-    :initform nil
+    :initform 0
     :custom integer
     :documentation
     "  If present matches from the source are shown only if the
@@ -1068,7 +1068,12 @@ an eieio class."
           (helm-aif (slot-value source 'filtered-candidate-transformer)
               (append (helm-mklist it)
                       (list #'helm-multiline-transformer))
-            (list #'helm-multiline-transformer)))))
+            (list #'helm-multiline-transformer))))
+  (helm-aif (slot-value source 'requires-pattern)
+      (let ((val (if (symbolp it)
+                     (symbol-value it)
+                   it)))
+        (setf (slot-value source 'requires-pattern) val))))
 
 (defmethod helm-setup-user-source ((_source helm-source)))
 

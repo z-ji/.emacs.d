@@ -118,7 +118,7 @@ while in `helm-M-x' session will disable it.
 
 You can get help on each command by persistent action.
 
-\(fn ARG &optional COMMAND-NAME)" t nil)
+\(fn ARG)" t nil)
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "helm-command" '("helm-")))
 
@@ -702,6 +702,8 @@ Keys description:
 
 - MULTILINE: See multiline in `helm-source'.
 
+- COERCE: See coerce in `helm-source'.
+
 - GROUP: See group in `helm-source'.
 
 Any prefix args passed during `helm-comp-read' invocation will be recorded
@@ -710,7 +712,7 @@ in `helm-current-prefix-arg', otherwise if prefix args were given before
 That's mean you can pass prefix args before or after calling a command
 that use `helm-comp-read' See `helm-M-x' for example.
 
-\(fn PROMPT COLLECTION &key TEST INITIAL-INPUT DEFAULT PRESELECT (BUFFER \"*Helm Completions*\") MUST-MATCH FUZZY REVERSE-HISTORY (REQUIRES-PATTERN 0) HISTORY INPUT-HISTORY (CASE-FOLD helm-comp-read-case-fold-search) (DEL-INPUT t) (PERSISTENT-ACTION nil) (PERSISTENT-HELP \"DoNothing\") (MODE-LINE helm-comp-read-mode-line) HELP-MESSAGE (KEYMAP helm-comp-read-map) (NAME \"Helm Completions\") HEADER-NAME CANDIDATES-IN-BUFFER MATCH-PART MATCH-DYNAMIC EXEC-WHEN-ONLY-ONE QUIT-WHEN-NO-CAND (VOLATILE t) SORT FC-TRANSFORMER HIST-FC-TRANSFORMER MARKED-CANDIDATES NOMARK (ALISTP t) (CANDIDATE-NUMBER-LIMIT helm-candidate-number-limit) MULTILINE ALLOW-NEST (GROUP \\='helm))" nil nil)
+\(fn PROMPT COLLECTION &key TEST INITIAL-INPUT DEFAULT PRESELECT (BUFFER \"*Helm Completions*\") MUST-MATCH FUZZY REVERSE-HISTORY (REQUIRES-PATTERN 0) HISTORY INPUT-HISTORY (CASE-FOLD helm-comp-read-case-fold-search) (DEL-INPUT t) (PERSISTENT-ACTION nil) (PERSISTENT-HELP \"DoNothing\") (MODE-LINE helm-comp-read-mode-line) HELP-MESSAGE (KEYMAP helm-comp-read-map) (NAME \"Helm Completions\") HEADER-NAME CANDIDATES-IN-BUFFER MATCH-PART MATCH-DYNAMIC EXEC-WHEN-ONLY-ONE QUIT-WHEN-NO-CAND (VOLATILE t) SORT FC-TRANSFORMER HIST-FC-TRANSFORMER MARKED-CANDIDATES NOMARK (ALISTP t) (CANDIDATE-NUMBER-LIMIT helm-candidate-number-limit) MULTILINE ALLOW-NEST COERCE (GROUP \\='helm))" nil nil)
 
 (autoload 'helm-read-file-name "helm-mode" "\
 Read a file name with helm completion.

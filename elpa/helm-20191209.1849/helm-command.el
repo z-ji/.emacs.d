@@ -28,12 +28,6 @@
   "Emacs command related Applications and libraries for Helm."
   :group 'helm)
 
-(defcustom helm-M-x-requires-pattern 0
-  "Value of requires-pattern for `helm-M-x'.
-Show all candidates on startup when 0 (default)."
-  :group 'helm-command
-  :type 'boolean)
-
 (defcustom helm-M-x-always-save-history nil
   "`helm-M-x' Save command in `extended-command-history' even when it fail."
   :group 'helm-command
@@ -41,18 +35,6 @@ Show all candidates on startup when 0 (default)."
 
 (defcustom helm-M-x-reverse-history nil
   "The history source of `helm-M-x' appear in second position when non--nil."
-  :group 'helm-command
-  :type 'boolean)
-
-(defcustom helm-M-x-fuzzy-match nil
-  "Enable fuzzy matching in `helm-M-x' when non--nil.
-
-This have no effect when `helm-M-x-use-completion-styles' is non nil"
-  :group 'helm-command
-  :type 'boolean)
-
-(defcustom helm-M-x-use-completion-styles t
-  "Use `completion-styles' in helm-M-x."
   :group 'helm-command
   :type 'boolean)
 
@@ -203,12 +185,27 @@ fuzzy matching is running its own sort function with a different algorithm."
   (helm-elisp--persistent-help
    candidate 'helm-describe-function))
 
+(defclass helm-M-x-class (helm-source-sync helm-type-command)
+  ((match-dynamic :initform t)
+   (requires-pattern :initform 0)
+   (must-match :initform t)
+   (filtered-candidate-transformer :initform 'helm-M-x-transformer)
+   (persistent-help :initform "Describe this command")
+   (help-message :initform 'helm-M-x-help-message)
+   (nomark :initform t)
+   (keymap :initform helm-M-x-map)))
+
 (defun helm-M-x-read-extended-command (collection &optional history)
-  "Read command name to invoke in `helm-M-x'.
-Helm completion is not provided when executing or defining
-kbd macros.
-Optional arg COLLECTION is to allow using another COLLECTION
-than the default which is OBARRAY."
+  "Read or execute action on command name in COLLECTION or HISTORY.
+
+When `helm-M-x-use-completion-styles' is used, several actions as of
+`helm-type-command' are used and executed from here, otherwise this
+function returns the command as a symbol.
+
+Helm completion is not provided when executing or defining kbd macros.
+
+Arg COLLECTION default is `obarray'.
+Arg HISTORY default is `extended-command-history'."
   (if (or defining-kbd-macro executing-kbd-macro)
       (if helm-mode
           (unwind-protect
@@ -229,40 +226,17 @@ than the default which is OBARRAY."
                        do (set-text-properties 0 (length c) nil c)
                        and collect c))
              (minibuffer-completion-confirm t)
-             (sources (and helm-M-x-use-completion-styles
-                           `(,(helm-build-sync-source "Emacs Commands history"
-                                :candidates (helm-dynamic-completion
-                                             (or history extended-command-history)
-                                             #'commandp
-                                             nil nil t)
-                                :match-dynamic t
-                                :requires-pattern helm-M-x-requires-pattern
-                                :must-match t
-                                :persistent-action
-                                'helm-M-x-persistent-action
-                                :persistent-help "Describe this command"
-                                :help-message 'helm-M-x-help-message
-                                :nomark t
-                                :group 'helm-command
-                                :keymap helm-M-x-map
-                                :filtered-candidate-transformer
-                                'helm-M-x-transformer-no-sort)
-                             ,(helm-build-sync-source "Emacs Commands"
-                                :candidates (helm-dynamic-completion
-                                             collection #'commandp
-                                             nil nil t)
-                                :match-dynamic t
-                                :requires-pattern helm-M-x-requires-pattern
-                                :must-match t
-                                :filtered-candidate-transformer
-                                'helm-M-x-transformer
-                                :persistent-action
-                                'helm-M-x-persistent-action
-                                :persistent-help "Describe this command"
-                                :help-message 'helm-M-x-help-message
-                                :nomark t
-                                :group 'helm-command
-                                :keymap helm-M-x-map))))
+             (sources `(,(helm-make-source "Emacs Commands history" 'helm-M-x-class
+                           :candidates (helm-dynamic-completion
+                                        (or history extended-command-history)
+                                        #'commandp
+                                        nil nil t)
+                           :filtered-candidate-transformer
+                           #'helm-M-x-transformer-no-sort)
+                        ,(helm-make-source "Emacs Commands" 'helm-M-x-class
+                           :candidates (helm-dynamic-completion
+                                        (or collection obarray) #'commandp
+                                        nil nil t))))
              (prompt (concat (cond
                               ((eq helm-M-x-prefix-argument '-) "- ")
                               ((and (consp helm-M-x-prefix-argument)
@@ -278,43 +252,39 @@ than the default which is OBARRAY."
         (unwind-protect
              (progn
                (setq current-prefix-arg nil)
-               (if sources
-                   ;; Use dynamic-matching and `completion-styles'.
-                   (helm :sources sources
-                         :prompt prompt
-                         :buffer "*helm M-x*"
-                         :history 'helm-M-x-input-history)
-                 ;; Use helm matching through `helm-comp-read'.
-                 (helm-comp-read
-                  prompt
-                  (or collection obarray)
-                  :test 'commandp
-                  :requires-pattern helm-M-x-requires-pattern
-                  :name "Emacs Commands"
-                  :buffer "*helm M-x*"
-                  :persistent-action (lambda (candidate)
-                                       (helm-elisp--persistent-help
-                                        candidate 'helm-describe-function))
-                  :persistent-help "Describe this command"
-                  :history (or history extended-command-history)
-                  :reverse-history helm-M-x-reverse-history
-                  :input-history 'helm-M-x-input-history
-                  :del-input nil
-                  :help-message 'helm-M-x-help-message
-                  :group 'helm-command
-                  :keymap helm-M-x-map
-                  :must-match t
-                  :match-part (lambda (c) (car (split-string c)))
-                  :fuzzy helm-M-x-fuzzy-match
-                  :nomark t
-                  :candidates-in-buffer t
-                  :fc-transformer 'helm-M-x-transformer
-                  :hist-fc-transformer 'helm-M-x-transformer-no-sort)))
+               (helm :sources sources
+                     :prompt prompt
+                     :buffer "*helm M-x*"
+                     :history 'helm-M-x-input-history))
           (cancel-timer tm)
           (setq helm--mode-line-display-prefarg nil)))))
 
+(defun helm-M-x-execute-command (command)
+  (when command
+    ;; Avoid having `this-command' set to *exit-minibuffer.
+    (setq this-command command
+          ;; Handle C-x z (repeat) Issue #322
+          real-this-command command)
+    ;; If helm-M-x is called with regular emacs completion (kmacro)
+    ;; use the value of arg otherwise use helm-current-prefix-arg.
+    (let ((prefix-arg (or helm-current-prefix-arg helm-M-x-prefix-argument))
+          (command-name (symbol-name command)))
+      (cl-flet ((save-hist
+                 (name)
+                 (set-default-toplevel-value
+                  'extended-command-history
+                  (cons name (delete name extended-command-history)))))
+        (condition-case-unless-debug err
+            (progn
+              (command-execute command 'record)
+              (save-hist command-name))
+          (error
+           (when helm-M-x-always-save-history
+             (save-hist command-name))
+           (signal (car err) (cdr err))))))))
+
 ;;;###autoload
-(defun helm-M-x (_arg &optional command-name)
+(defun helm-M-x (_arg)
   "Preconfigured `helm' for Emacs commands.
 It is `helm' replacement of regular `M-x' `execute-extended-command'.
 
@@ -327,29 +297,8 @@ You can get help on each command by persistent action."
   (interactive
    (progn
      (setq helm-M-x-prefix-argument current-prefix-arg)
-     (list current-prefix-arg (helm-M-x-read-extended-command obarray))))
-  (when (stringp command-name)
-    (unless (string= command-name "")
-      (let ((sym-com (and (stringp command-name) (intern-soft command-name))))
-        (when sym-com
-          ;; Avoid having `this-command' set to *exit-minibuffer.
-          (setq this-command sym-com
-                ;; Handle C-x z (repeat) Issue #322
-                real-this-command sym-com)
-          ;; If helm-M-x is called with regular emacs completion (kmacro)
-          ;; use the value of arg otherwise use helm-current-prefix-arg.
-          (let ((prefix-arg (or helm-current-prefix-arg helm-M-x-prefix-argument)))
-            (cl-flet ((save-hist (command)
-                        (setq extended-command-history
-                              (cons command (delete command extended-command-history)))))
-              (condition-case-unless-debug err
-                  (progn
-                    (command-execute sym-com 'record)
-                    (save-hist command-name))
-                (error
-                 (when helm-M-x-always-save-history
-                   (save-hist command-name))
-                 (signal (car err) (cdr err)))))))))))
+     (list current-prefix-arg)))
+  (helm-M-x-read-extended-command obarray))
 (put 'helm-M-x 'interactive-only 'command-execute)
 
 (provide 'helm-command)
