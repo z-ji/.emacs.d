@@ -7,7 +7,7 @@
 (powerline-moe-theme)
 
 ;; Show highlighted buffer-id as decoration. (Default: nil)
-;;(setq moe-theme-highlight-buffer-id t)
+(setq moe-theme-highlight-buffer-id t)
 
 (moe-theme-set-color 'w/b)
 ;;(moe-theme-random-color)
