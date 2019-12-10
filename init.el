@@ -37,8 +37,8 @@
 (eval-when-compile (require 'cl))
 (require 'init-local nil t)
 (require 'init-highlight-parentheses)
-;;(require 'init-nord-theme)
-(require 'init-moe-theme)
+(require 'init-nord-theme)
+;;(require 'init-moe-theme)
 (require 'init-cnfonts)
 ;;(require 'init-font)
 (require 'init-async)
@@ -80,6 +80,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("13d20048c12826c7ea636fbe513d6f24c0d43709a761052adbca052708798ce3" default)))
  '(package-selected-packages
    (quote
     (cnfonts dockerfile-mode markdown-mode exec-path-from-shell ox-pandoc restclient yaml-mode nord-theme htmlize nlinum elfeed with-editor helm-ag async use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region org ox-twbs company dash magit)))
