@@ -42,7 +42,7 @@
 (setq org-log-into-drawer t)
 
 ;;------org-modules------
-(setq org-modules'(org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m))
+(setq org-modules'(org-id org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m))
 ;;org-habit
 (setq org-habit-graph-column 80)
 (setq org-habit-show-habits-only-for-today nil)
@@ -70,5 +70,17 @@
 (setq org-highest-priority ?A)
 (setq org-lowest-priority ?D)
 (setq org-default-priority ?D)
+
+;; org-id
+(setq org-id-link-to-org-use-id t)
+;; see https://stackoverflow.com/questions/13340616/assign-ids-to-every-entry-in-org-mode
+(defun my/org-add-ids-to-headlines-in-file ()
+  "Add ID properties to all headlines in the current file which
+do not already have one."
+  (interactive)
+  (org-map-entries 'org-id-get-create))
+;; (add-hook 'org-mode-hook
+;;           (lambda ()
+;;             (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
 
 (provide 'init-org)

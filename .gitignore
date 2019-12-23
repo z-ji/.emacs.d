@@ -5,6 +5,7 @@ transient/
 .DS_Store
 .emacs.desktop
 .emacs.desktop.lock
+.org-id-locations
 org-clock-save.el
 ede-projects.el
 init-local.el
@@ -18,4 +19,3 @@ eshell
 deepin-emacs
 semanticdb
 url
-
