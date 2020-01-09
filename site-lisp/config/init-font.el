@@ -1,3 +1,12 @@
+;; Quick-Start
+;; ===========
+;;
+;; (defvar emacs-font-size 16
+;;   "The default font size.")
+;; (defvar emacs-font-name "Monaco"
+;;   "The default font name.")
+
+
 ;; (if (display-grayscale-p)
 ;;     (progn
 ;;       (set-frame-font (format "%s-%s" (eval emacs-font-name) (eval emacs-font-size)))
