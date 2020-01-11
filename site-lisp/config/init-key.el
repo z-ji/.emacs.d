@@ -33,9 +33,9 @@
 ;;make C-z do nothing
 (global-unset-key (kbd "C-x C-z"));;unbound keys to suspend-frame
 (global-set-key [(f5)] 'speedbar)
-(global-set-key (kbd "C-z") 'undo-tree-undo)
 
-(global-set-key (kbd "C-S-z") 'undo-tree-redo)
+;; (global-set-key (kbd "C-z") 'undo-tree-undo)
+;; (global-set-key (kbd "C-S-z") 'undo-tree-redo)
 
 
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
