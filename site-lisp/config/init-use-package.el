@@ -31,4 +31,10 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+;; undo-fu
+(use-package undo-fu
+  :ensure t
+  :bind (("C-z" . 'undo-fu-only-undo)
+         ("C-S-z" . 'undo-fu-only-redo)))
+
 (provide 'init-use-package)

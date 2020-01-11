@@ -81,9 +81,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   (quote
-    (cnfonts dockerfile-mode markdown-mode exec-path-from-shell ox-pandoc restclient yaml-mode nord-theme htmlize nlinum elfeed with-editor helm-ag async use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region org ox-twbs company dash magit)))
- '(tramp-syntax (quote default) nil (tramp)))
+   '(cnfonts dockerfile-mode markdown-mode exec-path-from-shell ox-pandoc restclient yaml-mode nord-theme htmlize nlinum elfeed with-editor helm-ag async use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region org ox-twbs company dash magit))
+ '(tramp-syntax 'default nil (tramp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
