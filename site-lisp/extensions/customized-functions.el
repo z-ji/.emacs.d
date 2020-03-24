@@ -88,4 +88,9 @@
   (interactive)
   (xah-insert-bracket-pair "`" "`"))
 
+(defun insert-single-quote-by-pair ()
+  "insert single quote by pair"
+  (interactive)
+  (xah-insert-bracket-pair "'" "'"))
+
 (provide 'customized-functions)
