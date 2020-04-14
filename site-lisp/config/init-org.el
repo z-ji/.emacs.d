@@ -25,10 +25,12 @@
         (latex . t)
         (plantuml . t)))
 
-;;org agenda: show last 7 days enties
-(setq org-agenda-start-day "-7d")
+;;---focus on yesterday, today and tomorrow---
+;; org agenda: show last 1 days enties
+(setq org-agenda-start-day "-1d")
 (setq org-agenda-start-on-weekday nil)
-(setq org-agenda-span 'fortnight)
+(setq org-agenda-span '3)
+;;---focus on yesterday, today and tomorrow---
 
 ;; see https://orgmode.org/manual/Deadlines-and-scheduling.html
 (setq org-deadline-warning-days 30)
