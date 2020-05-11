@@ -1,13 +1,6 @@
 ;; place here because it will not affect files that are loaded before the customization are read
 (setq load-prefer-newer t)
 
-;;conflict with (toggle-frame-maximized) in macOS, so must be here
-(tool-bar-mode -1)
-;; toggle-frame-fullscreen or toggle-frame-maximized should be the sooner the better
-;;(toggle-frame-fullscreen)
-(toggle-frame-maximized)
-;;(defconst initial-buffer-choice-value "~/emacs/all.org" "启动时打开的buffer")
-;;(defconst default-directory-value "~/emacs" "C-x C-f时的默认目录")
 (defun add-subdirs-to-load-path (dir)
   "Recursive add directories to `load-path'."
   (let ((default-directory (file-name-as-directory dir)))
@@ -37,6 +30,7 @@
 (eval-when-compile (require 'cl))
 (require 'init-local nil t)
 (require 'init-highlight-parentheses)
+(require 'init-frame)
 ;;(require 'init-nord-theme)
 (require 'init-moe-theme)
 (require 'init-cnfonts)

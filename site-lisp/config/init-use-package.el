@@ -6,6 +6,7 @@
 (bind-key* "C-?" 'comment-or-uncomment-region)
 (bind-key* "C-`" 'insert-backquote-quote-by-pair)
 (bind-key* "C-'" 'insert-single-quote-by-pair)
+(bind-key* "<f8>" 'toggle-frame-transparency)
 
 ;;;TODO only in org-mode
 (defun org-timer-start-keymap-hint()
