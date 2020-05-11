@@ -1,6 +1,3 @@
 [submodule "site-lisp/extensions/benchmark-init-el"]
 	path = site-lisp/extensions/benchmark-init-el
 	url = https://github.com/dholm/benchmark-init-el.git
-[submodule "site-lisp/extensions/undo-tree"]
-	path = site-lisp/extensions/undo-tree
-	url = https://github.com/emacsmirror/undo-tree.git

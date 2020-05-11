@@ -41,7 +41,6 @@
 (require 'init-imenu-anywhere)
 (require 'init-bracket)
 (require 'init-key)
-;;(require 'init-undo-tree)
 ;;;------line mode------
 (when (version< emacs-version "26.1") (require 'init-nlinum))
 (when (version<= "26.1" emacs-version) (require 'init-display-line-numbers))
