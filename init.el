@@ -22,6 +22,7 @@
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 ;;Load Emacs Lisp packages, and activate them.
 (when (version< emacs-version "27.0") (package-initialize))
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 ;;;------package config end------
 
 ;;;------modular config start------
@@ -75,7 +76,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (fish-mode undo-fu cnfonts dockerfile-mode markdown-mode exec-path-from-shell ox-pandoc restclient yaml-mode nord-theme htmlize nlinum elfeed with-editor helm-ag async use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region org ox-twbs company dash magit)))
+    (org-plus-contrib fish-mode undo-fu cnfonts dockerfile-mode markdown-mode exec-path-from-shell ox-pandoc restclient yaml-mode nord-theme htmlize nlinum elfeed with-editor helm-ag async use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-twbs company dash magit)))
  '(tramp-syntax (quote default) nil (tramp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
