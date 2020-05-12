@@ -1,9 +1,5 @@
 ;;Org Mode
 
-;;;disable because of the slow init time
-;;(setq org-clock-persist 'history)
-;;(org-clock-persistence-insinuate)
-
 ;;org TODO keywordso
 (setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "GET" "CLOSED(c)")
                           ))
@@ -24,6 +20,27 @@
         (calc . t)
         (latex . t)
         (plantuml . t)))
+
+
+;; Speeding Up Agendas, see https://orgmode.org/manual/Speeding-Up-Your-Agendas.html
+(setq org-agenda-dim-blocked-tasks nil)
+(setq org-agenda-inhibit-startup t)
+(setq org-agenda-use-tag-inheritance nil)
+
+
+;;------Clocking Work Time------
+;;;disable because of the slow init time
+;; (setq org-clock-persist 'history)
+;; (org-clock-persistence-insinuate)
+(setq org-clock-into-drawer "CLOCKLOG")
+;;------Clocking Work Time------
+
+
+;;------Effort Estimates------
+(setq org-global-properties '(("Effort_ALL". "0:05 0:10 0:15 0:20 0:30 1:00 2:00 3:00 4:00")))
+(setq org-columns-default-format "%6TODO %PRIORITY %38ITEM %8Effort(预计耗时/Estimated Effort）){:} %8CLOCKSUM_T(今日耗时/CLOCKSUM_T){:} %6CLOCKSUM(总耗时/CLOCKSUM){:} %TAGS")
+;;------Effort Estimates------
+
 
 ;;---focus on yesterday, today and tomorrow---
 ;; org agenda: show last 1 days enties
