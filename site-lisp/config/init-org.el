@@ -102,4 +102,18 @@ do not already have one."
 ;;           (lambda ()
 ;;             (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
 
+
+;; I prefer a new line between the begin and end markers, so customize the org-structure-template-alist
+(setq org-structure-template-alist
+  '(("a" . "export ascii\n")
+    ("c" . "center\n")
+    ("C" . "comment\n")
+    ("e" . "example\n")
+    ("E" . "export")
+    ("h" . "export html\n")
+    ("l" . "export latex\n")
+    ("q" . "quote\n")
+    ("s" . "src")
+    ("v" . "verse\n")))
+
 (provide 'init-org)
