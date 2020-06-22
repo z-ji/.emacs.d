@@ -102,8 +102,8 @@ do not already have one."
 ;;           (lambda ()
 ;;             (add-hook 'before-save-hook 'my/org-add-ids-to-headlines-in-file nil 'local)))
 
-
-;; I prefer a new line between the begin and end markers, so customize the org-structure-template-alist
+;;------customize the org-structure-template-alist------
+;; I prefer a new line between the begin and end markers
 (setq org-structure-template-alist
   '(("a" . "export ascii\n")
     ("c" . "center\n")
@@ -115,5 +115,9 @@ do not already have one."
     ("q" . "quote\n")
     ("s" . "src")
     ("v" . "verse\n")))
+;; add new elements to org-structure-template-alist
+(add-to-list 'org-structure-template-alist '("b" . "src bash :results verbatim\n"))
+(add-to-list 'org-structure-template-alist '("S" . "src sh\n"))
+;;------customize the org-structure-template-alist------
 
 (provide 'init-org)
