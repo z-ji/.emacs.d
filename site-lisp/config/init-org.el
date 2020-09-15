@@ -120,4 +120,13 @@ do not already have one."
 (add-to-list 'org-structure-template-alist '("S" . "src sh\n"))
 ;;------customize the org-structure-template-alist------
 
+
+;;------indent config------
+;; disable auto-indent lines under headline when demoting headings
+(setq org-adapt-indentation 'headline-data)
+;; do not make RET to indent
+(add-hook 'org-mode-hook (lambda () (electric-indent-local-mode -1)))
+;;------indent config------
+
 (provide 'init-org)
+
