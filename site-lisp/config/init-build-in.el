@@ -92,4 +92,9 @@
 (setq large-file-warning-threshold 16666666)
 ;;;;;;;;;;;;;;;;;;;;;;;;;;build-in variable and function;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;------cua-mode------
+;; only use the 'enhanced rectangle support'
+(setq cua-enable-cua-keys nil)
+;;------cua-mode------
+
 (provide 'init-build-in)
