@@ -114,7 +114,8 @@ do not already have one."
     ("l" . "export latex\n")
     ("q" . "quote\n")
     ("s" . "src")
-    ("v" . "verse\n")))
+    ("v" . "verse\n")
+    ("j" . "json\n")))
 ;; add new elements to org-structure-template-alist
 (add-to-list 'org-structure-template-alist '("b" . "src bash :results verbatim\n"))
 (add-to-list 'org-structure-template-alist '("S" . "src sh\n"))
