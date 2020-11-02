@@ -1,0 +1,2 @@
+;;; Generated package description from /Users/zj/.emacs.d/elpa/ob-async-20200921.205/ob-async.el  -*- no-byte-compile: t -*-
+(define-package "ob-async" "20200921.205" "Asynchronous org-babel src block execution" '((async "1.9") (org "9.0.1") (emacs "24.4") (dash "2.14.1")) :commit "de1cd6c93242a4cb8773bbe115b7be3d4dd6b97e" :keywords '("tools") :authors '(("Andrew Stahlman" . "andrewstahlman@gmail.com")) :maintainer '("Andrew Stahlman" . "andrewstahlman@gmail.com") :url "https://github.com/astahlman/ob-async")
