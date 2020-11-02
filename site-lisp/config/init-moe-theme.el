@@ -9,7 +9,8 @@
 ;; Show highlighted buffer-id as decoration. (Default: nil)
 (setq moe-theme-highlight-buffer-id t)
 
-(moe-theme-set-color 'w/b)
+;; error happened after update from moe-theme-20200216.1927 to moe-theme-20200930.853
+;;(moe-theme-set-color 'w/b)
 ;;(moe-theme-random-color)
 
 ;;(setq moe-light-pure-white-background-in-terminal t)
