@@ -38,7 +38,7 @@
 
 ;;------Effort Estimates------
 (setq org-global-properties '(("Effort_ALL". "0:05 0:10 0:15 0:20 0:30 1:00 2:00 3:00 4:00")))
-(setq org-columns-default-format "%6TODO %PRIORITY %38ITEM %8Effort(预计耗时/Estimated Effort）){:} %8CLOCKSUM_T(今日耗时/CLOCKSUM_T){:} %6CLOCKSUM(总耗时/CLOCKSUM){:} %TAGS")
+(setq org-columns-default-format "%6TODO %PRIORITY %38ITEM %8Effort(预计耗时/Estimated Effort）){:} %8CLOCKSUM_T(今日耗时/CLOCKSUM_T){:} %6CLOCKSUM(已耗时/CLOCKSUM){:} %TAGS")
 ;;------Effort Estimates------
 
 
