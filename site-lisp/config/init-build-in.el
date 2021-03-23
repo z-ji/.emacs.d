@@ -43,7 +43,7 @@
 
 ;;;设置visual-line-mode为全局的,一行字数超过当前窗口大小时换行显示
 ;;(add-hook 'text-mode-hook 'turn-on-visual-line-mode)全局visual-line-mode的另一种方式
-;;(global-visual-line-mode t)
+(setq-default global-visual-line-mode t)
 
 ;;;让mode line显示列数(行数为默认显示)
 (column-number-mode t)
