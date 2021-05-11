@@ -1,4 +1,4 @@
-;;Org Mode
+;;Org mode
 
 ;;org TODO keywordso
 (setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "GET" "CLOSED(c)")
