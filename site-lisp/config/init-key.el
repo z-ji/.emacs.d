@@ -12,6 +12,9 @@
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 (global-set-key "\C-cs" 'org-show-subtree)
+(global-set-key (kbd "C-c C-x C-j") 'org-clock-goto)
+(global-set-key (kbd "C-c C-x C-o") 'org-clock-out)
+
 ;;Find file as root
 (global-set-key (kbd "C-x C-S-f") 'find-file-root)
 ;;(fullscreen)
