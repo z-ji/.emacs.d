@@ -1,8 +1,6 @@
 (global-set-key (kbd "C-c m") 'move-to-middle-of-line)
 (global-set-key (kbd "C-x C-j") 'dired-jump)
 
-(global-set-key (kbd "C-c C-.") 'insert-now)
-(global-set-key (kbd "C-c .") 'insert-now-second)
 (global-set-key (kbd "C-SPC") 'nil)
 ;;elfeed
 (global-set-key (kbd "C-x w") 'elfeed)

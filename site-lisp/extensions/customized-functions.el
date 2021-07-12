@@ -4,24 +4,46 @@
          (end (line-end-position))
          (middle (/ (+ end begin) 2)))
     (goto-char middle)))
-(defun org-insert-now ()
+
+;; insert current timestamp
+(defun org-insert-current-timestamp ()
   "insert current date-time to current cursor."
   (interactive)
   (org-insert-heading-respect-content)
   (insert (format-time-string "<%Y-%m-%d %a %T:%3N> ") (current-buffer)))
-(defun org-insert-now-second ()
+(defun org-insert-current-timestamp-second ()
   "insert current date-time to current cursor."
   (interactive)
   (org-insert-heading-respect-content)
   (insert (format-time-string "<%Y-%m-%d %a %T> ") (current-buffer)))
-(defun insert-now ()
+(defun insert-current-timestamp ()
   "insert current date-time to current cursor."
   (interactive)
   (insert (format-time-string "<%Y-%m-%d %a %T:%3N>") (current-buffer)))
-(defun insert-now-second ()
+(defun insert-current-timestamp-second ()
   "insert current date-time to current cursor."
   (interactive)
   (insert (format-time-string "<%Y-%m-%d %a %T>") (current-buffer)))
+;; insert current inactive timestamp
+(defun org-insert-current-inactive-timestamp ()
+  "insert current date-time to current cursor."
+  (interactive)
+  (org-insert-heading-respect-content)
+  (insert (format-time-string "[%Y-%m-%d %a %T:%3N] ") (current-buffer)))
+(defun org-insert-current-inactive-timestamp-second ()
+  "insert current date-time to current cursor."
+  (interactive)
+  (org-insert-heading-respect-content)
+  (insert (format-time-string "[%Y-%m-%d %a %T] ") (current-buffer)))
+(defun insert-current-inactive-timestamp ()
+  "insert current date-time to current cursor."
+  (interactive)
+  (insert (format-time-string "[%Y-%m-%d %a %T:%3N]") (current-buffer)))
+(defun insert-current-inactive-timestamp-second ()
+  "insert current date-time to current cursor."
+  (interactive)
+  (insert (format-time-string "[%Y-%m-%d %a %T]") (current-buffer)))
+
 ;;当前时间函数
 (defun now-is ()
   "Display current time."
@@ -66,7 +88,7 @@
             (mapcar (lambda (keywords)
                       (let ((todo-seq
                              (-map (lambda (x) (first (split-string  x "(")))
-                                   (rest keywords)))) 
+                                   (rest keywords))))
                         (cl-position-if (lambda (x) (string= x todo)) todo-seq)))
                     org-todo-keywords))))
 

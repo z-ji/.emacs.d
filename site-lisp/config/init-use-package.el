@@ -1,7 +1,12 @@
 (bind-key* "<C-[>" 'backward-sexp)
 (bind-key* "<C-]>" 'forward-sexp)
-(bind-key* "<C-return>" 'org-insert-now-second)
-(bind-key* "<C-M-return>" 'org-insert-now)
+
+;; keymaps for insert current timestamp/inactive timestamp
+(bind-key* "<C-return>" 'org-insert-current-timestamp-second)
+(bind-key* "<C-M-return>" 'org-insert-current-inactive-timestamp-second)
+(bind-key* "C-c C-." 'insert-current-timestamp-second)
+(bind-key* "C-c C-!" 'insert-current-inactive-timestamp-second)
+
 (bind-key* "C-/" 'comment-line)
 (bind-key* "C-?" 'comment-or-uncomment-region)
 (bind-key* "C-`" 'insert-backquote-quote-by-pair)
