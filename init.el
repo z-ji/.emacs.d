@@ -69,6 +69,7 @@
 (require 'init-dockerfile)
 (require 'init-ob-async)
 (require 'init-evil-nerd-commenter)
+(require 'init-trash)
 ;;;------modular config end------
 
 (custom-set-variables
@@ -77,7 +78,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(evil-nerd-commenter ob-async org-plus-contrib fish-mode undo-fu cnfonts dockerfile-mode markdown-mode exec-path-from-shell ox-pandoc restclient yaml-mode nord-theme htmlize nlinum elfeed with-editor helm-ag async use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-twbs company dash magit))
+   '(osx-trash evil-nerd-commenter ob-async org-plus-contrib fish-mode undo-fu cnfonts dockerfile-mode markdown-mode exec-path-from-shell ox-pandoc restclient yaml-mode nord-theme htmlize nlinum elfeed with-editor helm-ag async use-package plantuml-mode clipmon helm multi-term imenu-anywhere highlight-parentheses moe-theme powerline editorconfig expand-region ox-twbs company dash magit))
  '(tramp-syntax 'default nil (tramp)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
