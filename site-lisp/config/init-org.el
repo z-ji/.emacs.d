@@ -61,7 +61,17 @@
 (setq org-log-into-drawer t)
 
 ;;------org-modules------
-(setq org-modules'(org-id org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m))
+(setq org-modules '(org-id
+                    org-habit                    
+                    ol-bbdb
+                    ol-bibtex
+                    ol-docview
+                    ol-gnus
+                    ol-info
+                    ol-irc
+                    ol-mhe
+                    ol-rmail
+                    ol-w3m))
 ;;org-habit
 (setq org-habit-graph-column 80)
 (setq org-habit-show-habits-only-for-today nil)
