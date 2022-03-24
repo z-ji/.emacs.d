@@ -28,13 +28,13 @@
 		(:authors
 		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
  (annotate .
-	   [(1 5 0)
+	   [(1 5 1)
 	    nil "annotate files without changing them" tar
 	    ((:url . "https://github.com/bastibe/annotate.el")
 	     (:maintainer "Bastian Bechtold")
 	     (:authors
 	      ("Bastian Bechtold"))
-	     (:commit . "46aa377cfc31fbaa4a0e9e3ada54d5e299018b95"))])
+	     (:commit . "aa3c0540ee644e0e205644545d659a6ba16d76ac"))])
  (anti-zenburn-theme .
 		     [(2 5 1)
 		      nil "Low-contrast Zenburn-inverted theme" tar
@@ -149,7 +149,7 @@
 	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:keywords "ocaml"))])
  (cider .
-	[(1 2 0)
+	[(1 3 0)
 	 ((emacs
 	   (26))
 	  (clojure-mode
@@ -174,15 +174,28 @@
 	   ("Bozhidar Batsov" . "bozhidar@batsov.dev")
 	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
 	   ("Hugo Duncan" . "hugo@hugoduncan.org")
-	   ("Steve Purcell" . "steve@sanityinc.com")))])
+	   ("Steve Purcell" . "steve@sanityinc.com"))
+	  (:commit . "6ddccef1d8cf48515b1cfa0addc1dd41e57e840a"))])
  (clojure-mode .
-	       [(5 13 0)
+	       [(5 14 0)
 		((emacs
 		  (25 1)))
 		"Major mode for Clojure code" tar
 		((:url . "http://github.com/clojure-emacs/clojure-mode")
-		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
-		 (:keywords "languages" "clojure" "clojurescript" "lisp"))])
+		 (:keywords "languages" "clojure" "clojurescript" "lisp")
+		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+		 (:commit . "b7d08b87f6a116ff47b33ee857926b60c66c3ab7"))])
+ (coffee-mode .
+	      [(0 6 3)
+	       ((emacs
+		 (24 3)))
+	       "Major mode for CoffeeScript code" tar
+	       ((:url . "http://github.com/defunkt/coffee-mode")
+		(:keywords "coffeescript" "major" "mode")
+		(:maintainer "Chris Wanstrath" . "chris@ozmm.org")
+		(:authors
+		 ("Chris Wanstrath" . "chris@ozmm.org"))
+		(:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (color-theme-tangotango .
 			 [(0 0 6)
 			  ((color-theme
@@ -444,18 +457,20 @@
 	       ("Matus Goljer" . "matus.goljer@gmail.com"))
 	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
  (geiser .
-	 [(0 22 2)
+	 [(0 23)
 	  ((emacs
 	    (25 1))
 	   (transient
-	    (0 3)))
+	    (0 3))
+	   (project
+	    (0 8 1)))
 	  "GNU Emacs and Scheme talk to each other" tar
 	  ((:url . "https://gitlab.com/emacs-geiser/")
 	   (:keywords "languages" "scheme" "geiser")
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 	   (:authors
 	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-	   (:commit . "c1cc4da1edc46b763e0342ab4aa971e54f48658d"))])
+	   (:commit . "e3b65ae29a78728cf4078f8a949217ec75204074"))])
  (geiser-chez .
 	      [(0 17)
 	       ((emacs
@@ -518,18 +533,18 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:keywords "languages" "gauche" "scheme" "geiser"))])
  (geiser-guile .
-	       [(0 21 2)
+	       [(0 23)
 		((emacs
 		  (25 1))
 		 (geiser
-		  (0 21)))
+		  (0 23 1)))
 		"Guile's implementation of the geiser protocols" tar
 		((:url . "https://gitlab.com/emacs-geiser/guile")
 		 (:keywords "languages" "guile" "scheme" "geiser")
 		 (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 		 (:authors
 		  ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-		 (:commit . "ecd118171a111e04120d11c0d72345ce1d0f8066"))])
+		 (:commit . "aa48110d69b018f03dbff0aa9e830111fef71da4"))])
  (geiser-kawa .
 	      [(0 0 1)
 	       ((emacs
@@ -714,7 +729,7 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 8 4)
+       [(3 8 5)
 	((helm-core
 	  (3 8 4))
 	 (popup
@@ -724,9 +739,9 @@
 	 (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	 (:authors
 	  ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	 (:commit . "a7b9e898296142465c0857b2d201d8d828ba7b05"))])
+	 (:commit . "5e035c9193bf1e1d4bb709794a154957544dcfc7"))])
  (helm-core .
-	    [(3 8 4)
+	    [(3 8 5)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -736,7 +751,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	      (:authors
 	       ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	      (:commit . "a7b9e898296142465c0857b2d201d8d828ba7b05"))])
+	      (:commit . "5e035c9193bf1e1d4bb709794a154957544dcfc7"))])
  (highlight-parentheses .
 			[(2 1 0)
 			 ((emacs
@@ -767,14 +782,14 @@
 	      ((:url . "https://github.com/idris-hackers/idris-mode")
 	       (:keywords "languages"))])
  (iedit .
-	[(0 9 9 9)
+	[(0 9 9 9 9)
 	 nil "Edit multiple regions in the same way simultaneously." tar
 	 ((:url . "https://github.com/victorhge/iedit")
 	  (:keywords "occurrence" "region" "simultaneous" "refactoring")
 	  (:maintainer "Victor Ren" . "victorhge@gmail.com")
 	  (:authors
 	   ("Victor Ren" . "victorhge@gmail.com"))
-	  (:commit . "abcc27a9f07a7f855b0a8314f18640fd5cd7a0b6"))])
+	  (:commit . "699e179dac18c78698cba1a2052bee6f0bbc6bf7"))])
  (inf-clojure .
 	      [(3 1 0)
 	       ((emacs
@@ -1250,7 +1265,7 @@
 	     ("Bozhidar Batsov"))
 	    (:keywords "project" "convenience"))])
  (rust-mode .
-	    [(1 0 3)
+	    [(1 0 4)
 	     ((emacs
 	       (25 1)))
 	     "A major-mode for editing Rust source code" tar
@@ -1258,7 +1273,8 @@
 	      (:keywords "languages")
 	      (:maintainer "Mozilla")
 	      (:authors
-	       ("Mozilla")))])
+	       ("Mozilla"))
+	      (:commit . "e35a1800fc0f9ed178539d6fb82ed885c1014fb5"))])
  (sass-mode .
 	    [(3 0 16)
 	     ((haml-mode
@@ -1492,15 +1508,16 @@
 		       (:authors
 			("Joost Kremers" . "joostkremers@fastmail.fm")))])
  (web-mode .
-	   [(17 0 4)
+	   [(17 2 0)
 	    ((emacs
 	      (23 1)))
 	    "major mode for editing web templates" tar
 	    ((:url . "https://web-mode.org")
-	     (:maintainer "François-Xavier Bois")
+	     (:keywords "languages")
+	     (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
 	     (:authors
-	      ("François-Xavier Bois <fxbois AT Google Mail Service>"))
-	     (:keywords "languages"))])
+	      ("François-Xavier Bois"))
+	     (:commit . "f70277774a725e177774cc81ecbd228792cd6656"))])
  (webpaste .
 	   [(3 2 2)
 	    ((emacs
