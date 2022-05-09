@@ -1,7 +1,7 @@
 ;;Org mode
 
 ;;org TODO keywords
-(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "GET" "CLOSED(c)")
+(setq org-todo-keywords '((sequence "TODO(t)" "|" "DONE(d)" "CLOSED(c)")
                           ))
 (add-hook 'message-mode-hook 'turn-on-orgstruct)
 (add-hook 'message-mode-hook 'turn-on-orgstruct++)
