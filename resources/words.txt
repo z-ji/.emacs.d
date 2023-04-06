@@ -65554,6 +65554,7 @@ cosmorama
 cosmoramic
 cosmorganic
 cosmos
+cosmoshub
 cosmoscope
 cosmoses
 cosmosophy
@@ -100119,6 +100120,7 @@ ethereally
 etherealness
 etherean
 ethered
+ethereum
 etherene
 ethereous
 etherial
