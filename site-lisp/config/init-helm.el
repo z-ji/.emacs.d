@@ -1,4 +1,3 @@
-(require 'helm-config)
 (helm-mode 1)
 (helm-autoresize-mode 1)
 (setq ;;;Fuzzy matching, see https://github.com/emacs-helm/helm/wiki/Fuzzy-matching
