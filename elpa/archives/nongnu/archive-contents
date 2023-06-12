@@ -337,16 +337,16 @@
 	     ("Akib Azmain Turja" . "akib@disroot.org"))
 	    (:commit . "bebdb6a165bdc3bb6b357706d0ce58f57271d137"))])
  (devil .
-	[(0 3 0)
+	[(0 4 0)
 	 ((emacs
 	   (24 4)))
-	 "Minor mode for Devil-like command entering" tar
+	 "Minor mode for translating key sequences" tar
 	 ((:url . "https://github.com/susam/devil")
 	  (:keywords "convenience" "abbrev")
 	  (:maintainer "Susam Pal" . "susam@susam.net")
 	  (:authors
 	   ("Susam Pal" . "susam@susam.net"))
-	  (:commit . "79fd50fe22ce45968779f0e176247ab7988f0905"))])
+	  (:commit . "c87075a0cd087165f8528de6952263b4ef26858b"))])
  (diff-ansi .
 	    [(0 2)
 	     ((emacs
@@ -1593,7 +1593,7 @@
 	     ("joddie <jonxfield at gmail.com>"))
 	    (:commit . "3a59d133d1ed9fd941ddecc85ee2a8e32be3d267"))])
  (pdf-tools .
-	    [(1 0 0)
+	    [(1 1 0)
 	     ((emacs
 	       (26 3))
 	      (tablist
@@ -1606,7 +1606,7 @@
 	      (:maintainer "Vedang Manerikar" . "vedang.manerikar@gmail.com")
 	      (:authors
 	       ("Andreas Politz" . "mail@andreas-politz.de"))
-	      (:commit . "96703b2bb5c937afd05778086c43280b0593fe99"))])
+	      (:commit . "a9c9a12c3ecf2005fa641059368ac8284f507620"))])
  (php-mode .
 	   [(1 24 3)
 	    ((emacs
@@ -1917,7 +1917,7 @@
 	   ("Random User"))
 	  (:commit . "260620850615f694d946415f12801c78237e2205"))])
  (sweeprolog .
-	     [(0 17 0)
+	     [(0 19 0)
 	      ((emacs
 		(28 1)))
 	      "Embedded SWI-Prolog" tar
@@ -1926,7 +1926,7 @@
 	       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
 	       (:authors
 		("Eshel Yaron" . "me@eshelyaron.com"))
-	       (:commit . "8be1cb5f436f1381ce95344e933f296e7f078f6e"))])
+	       (:commit . "6d1ac74c9b01d41de8259cff2f054906154da6bd"))])
  (swift-mode .
 	     [(8 6 0)
 	      ((emacs
@@ -2238,7 +2238,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(23 11 20230507152313)
+	       [(23 11 20230609124049)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -2247,7 +2247,7 @@
 		 (:maintainer "Xah Lee" . "xah@xahlee.org")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "3f14bfcaadf9ee035802592bfca8eb19c703983e"))])
+		 (:commit . "dd172475f46e12b0c8523e2ad27dd72c640cb4ac"))])
  (xkcd .
        [(1 1)
 	((json
