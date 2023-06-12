@@ -129,6 +129,7 @@ do not already have one."
 ;; add new elements to org-structure-template-alist
 (add-to-list 'org-structure-template-alist '("b" . "src bash :results verbatim\n"))
 (add-to-list 'org-structure-template-alist '("S" . "src sh\n"))
+(add-to-list 'org-structure-template-alist '("m" . "src markdown\n"))
 ;;------customize the org-structure-template-alist------
 
 ;;------indent config------
